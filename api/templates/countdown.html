@@ -72,6 +72,7 @@
             margin-bottom: 10px;
             background: linear-gradient(to right, #05fcfc, #fda085);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             position: relative;
             display: inline-block;
@@ -475,12 +476,19 @@
             }
         }
         
-        // Update countdown timer
         function updateCountdown() {
             // Target date (November 10, 2025 at 8:00 AM Sri Lanka time)
-            const targetDate = new Date('{{ target_date }}');
+            const targetDateStr = '{{ target_date }}';
+            if (!targetDateStr) {
+                return;
+            }
+            const targetDate = new Date(targetDateStr);
+            if (isNaN(targetDate.getTime())) {
+                return;
+            }
             
             // Get current time
+            const now = new Date();
             const now = new Date();
             
             // Calculate time difference
