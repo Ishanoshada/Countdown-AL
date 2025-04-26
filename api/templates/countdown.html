@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A/L Exam Countdown</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: float 15s infinite linear;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100px);
+                opacity: 0;
+            }
+        }
+        
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            width: 90%;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            margin: 20px;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #f6d365, #fda085);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            bottom: -10px;
+            left: 0;
+            background: linear-gradient(to right, #f6d365, #fda085);
+            border-radius: 2px;
+            transform-origin: right;
+            animation: underline 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes underline {
+            from { transform: scaleX(0.7); }
+            to { transform: scaleX(1); }
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            margin-top: 25px;
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .countdown-item {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            min-width: 120px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .countdown-item::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: rotate(45deg);
+            animation: shine 5s infinite linear;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+        
+        .countdown-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .countdown-value {
+            font-size: 4rem;
+            font-weight: bold;
+            text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .countdown-label {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.7;
+        }
+        
+        .target-date {
+            margin-top: 40px;
+            font-size: 1.1rem;
+            opacity: 0.7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .target-date i {
+            font-size: 1.5rem;
+            color: #f6d365;
+        }
+        
+        .motivational-quote {
+            margin-top: 40px;
+            font-style: italic;
+            opacity: 0.8;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            padding: 20px;
+            border-left: 4px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .progress-container {
+            margin-top: 40px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            height: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(to right, #f6d365, #fda085);
+            border-radius: 5px;
+            transition: width 1s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100px;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: progress-shine 2s infinite;
+        }
+        
+        @keyframes progress-shine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(300%); }
+        }
+        
+        .study-mode-btn {
+            margin-top: 30px;
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #f6d365, #fda085);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .study-mode-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .study-mode-btn:active {
+            transform: translateY(-1px);
+        }
+        
+        .study-mode-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-100%);
+            transition: transform 0.3s;
+        }
+        
+        .study-mode-btn:hover::before {
+            transform: translateX(0);
+        }
+        
+        @media (max-width: 768px) {
+            .countdown {
+                gap: 10px;
+            }
+            
+            .countdown-item {
+                min-width: 80px;
+                padding: 15px;
+            }
+            
+            .countdown-value {
+                font-size: 2.5rem;
+            }
+            
+            .countdown-label {
+                font-size: 0.9rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    
+    <div class="container animate__animated animate__fadeIn">
+        <h1 class="animate__animated animate__bounceIn">A/L Exam Countdown</h1>
+        <p class="subtitle animate__animated animate__fadeIn animate__delay-1s">Your journey to success is counting down!</p>
+        
+        <div class="countdown">
+            <div class="countdown-item animate__animated animate__zoomIn animate__delay-1s">
+                <div class="countdown-value" id="days">{{ days }}</div>
+                <div class="countdown-label">Days</div>
+            </div>
+            <div class="countdown-item animate__animated animate__zoomIn animate__delay-1s">
+                <div class="countdown-value" id="hours">{{ hours }}</div>
+                <div class="countdown-label">Hours</div>
+            </div>
+            <div class="countdown-item animate__animated animate__zoomIn animate__delay-1s">
+                <div class="countdown-value" id="minutes">{{ minutes }}</div>
+                <div class="countdown-label">Minutes</div>
+            </div>
+            <div class="countdown-item animate__animated animate__zoomIn animate__delay-1s">
+                <div class="countdown-value" id="seconds">{{ seconds }}</div>
+                <div class="countdown-label">Seconds</div>
+            </div>
+        </div>
+        
+        <div class="progress-container animate__animated animate__fadeIn animate__delay-2s">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        
+        <p class="target-date animate__animated animate__fadeIn animate__delay-2s">
+            <i class="fas fa-calendar-alt"></i> Target Date: {{ target_date }} (Colombo, Sri Lanka Time)
+        </p>
+        
+        <div class="motivational-quote animate__animated animate__fadeIn animate__delay-2s">
+            "Success is not final, failure is not fatal: It is the courage to continue that counts."
+        </div>
+        
+        <button class="study-mode-btn animate__animated animate__pulse animate__infinite animate__slow">
+            <i class="fas fa-book"></i> Study Mode
+        </button>
+    </div>
+    
+    <script>
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                // Random positioning and animation
+                const size = Math.random() * 6 + 2;
+                const left = Math.random() * 100;
+                const animationDuration = Math.random() * 20 + 10;
+                const animationDelay = Math.random() * 10;
+                const opacity = Math.random() * 0.5 + 0.1;
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${left}%`;
+                particle.style.bottom = `-${size}px`;
+                particle.style.opacity = opacity;
+                particle.style.animation = `float ${animationDuration}s infinite linear`;
+                particle.style.animationDelay = `${animationDelay}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Update countdown timer
+        function updateCountdown() {
+            // Target date (November 10, 2025 at 8:00 AM Sri Lanka time)
+            const targetDate = new Date('{{ target_date }}');
+            
+            // Get current time
+            const now = new Date();
+            
+            // Calculate time difference
+            const diff = targetDate - now;
+            
+            if (diff <= 0) {
+                document.getElementById('days').textContent = '0';
+                document.getElementById('hours').textContent = '0';
+                document.getElementById('minutes').textContent = '0';
+                document.getElementById('seconds').textContent = '0';
+                return;
+            }
+            
+            // Calculate days, hours, minutes, seconds
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            // Update the countdown
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+            
+            // Update progress bar
+            // Assuming 365 days as preparation time
+            const totalPreparationTime = 365 * 24 * 60 * 60 * 1000; // 1 year in milliseconds
+            const timeElapsed = totalPreparationTime - diff;
+            const progressPercentage = Math.min(100, Math.max(0, (timeElapsed / totalPreparationTime) * 100));
+            document.getElementById('progressBar').style.width = `${progressPercentage}%`;
+        }
+        
+        // Quotes array
+        const motivationalQuotes = [
+            "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+            "The future depends on what you do today.",
+            "Don't watch the clock; do what it does. Keep going.",
+            "Believe you can and you're halfway there.",
+            "It always seems impossible until it's done.",
+            "The secret of getting ahead is getting started.",
+            "Your time is limited, don't waste it living someone else's life.",
+            "The best way to predict your future is to create it.",
+            "Education is the most powerful weapon which you can use to change the world.",
+            "The beautiful thing about learning is that no one can take it away from you."
+        ];
+        
+        // Change motivational quote every 10 seconds
+        function changeQuote() {
+            const quoteElement = document.querySelector('.motivational-quote');
+            const randomIndex = Math.floor(Math.random() * motivationalQuotes.length);
+            quoteElement.classList.remove('animate__fadeIn');
+            quoteElement.classList.add('animate__fadeOut');
+            
+            setTimeout(() => {
+                quoteElement.textContent = motivationalQuotes[randomIndex];
+                quoteElement.classList.remove('animate__fadeOut');
+                quoteElement.classList.add('animate__fadeIn');
+            }, 500);
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+            setInterval(changeQuote, 10000);
+            
+            // Simulate button click effect
+            document.querySelector('.study-mode-btn').addEventListener('click', function() {
+                alert('Study mode activated! Focus on your goals!');
+            });
+        });
+    </script>
+</body>
+</html>

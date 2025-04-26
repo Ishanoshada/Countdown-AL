@@ -1,0 +1,8 @@
+Flask
+flask-minify
+pytz
+Werkzeug
+Jinja2
+MarkupSafe
+itsdangerous
+click
