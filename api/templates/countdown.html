@@ -511,7 +511,7 @@
             
             // Get current time
             const now = new Date();
-            const now = new Date();
+            
             
             // Calculate time difference
             const diff = targetDate - now;
@@ -536,12 +536,12 @@
             document.getElementById('minutes').textContent = minutes;
             document.getElementById('seconds').textContent = seconds;
             
-            // Update progress bar
-            // Assuming 365 days as preparation time
-            const totalPreparationTime = 365 * 24 * 60 * 60 * 1000; // 1 year in milliseconds
-            const timeElapsed = totalPreparationTime - diff;
-            const progressPercentage = Math.min(100, Math.max(0, (timeElapsed / totalPreparationTime) * 100));
-            document.getElementById('progressBar').style.width = `${progressPercentage}%`;
+            // // Update progress bar
+            // // Assuming 365 days as preparation time
+            // const totalPreparationTime = 365 * 24 * 60 * 60 * 1000; // 1 year in milliseconds
+            // const timeElapsed = totalPreparationTime - diff;
+            // const progressPercentage = Math.min(100, Math.max(0, (timeElapsed / totalPreparationTime) * 100));
+            // document.getElementById('progressBar').style.width = `${progressPercentage}%`;
         }
         
         // Quotes array
@@ -579,10 +579,65 @@
             setInterval(updateCountdown, 1000);
             setInterval(changeQuote, 10000);
             
-            // Simulate button click effect
-            document.querySelector('.study-mode-btn').addEventListener('click', function() {
-                alert('Study mode activated! Focus on your goals!');
-            });
+            // Define and handle study mode toggle
+            const studyModeBtn = document.querySelector('.study-mode-btn');
+            if (studyModeBtn) {
+                studyModeBtn.addEventListener('click', () => {
+                    const studyTips = `
+                        <div style="text-align:left; padding:20px;">
+                            <h3>Study Mode Tools:</h3>
+                            <ul>
+                                <li>🕒 Time Management
+                                    <ul>
+                                        <li>Use Pomodoro Technique (25 min study, 5 min break)</li>
+                                        <li>Create daily study schedule</li>
+                                        <li>Track study hours</li>
+                                    </ul>
+                                </li>
+                                <li>📚 Study Methods
+                                    <ul>
+                                        <li>Active recall practice</li>
+                                        <li>Mind mapping</li>
+                                        <li>Past paper solving</li>
+                                    </ul>
+                                </li>
+                                <li>🎯 Focus Tips
+                                    <ul>
+                                        <li>Find quiet study space</li>
+                                        <li>Remove distractions</li>
+                                        <li>Take regular breaks</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    `;
+                    
+                    const modal = document.createElement('div');
+                    modal.style.cssText = `
+                        position: fixed;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        background: linear-gradient(135deg, #667eea, #764ba2);
+                        padding: 20px;
+                        border-radius: 10px;
+                        color: #fff;
+                        max-width: 90%;
+                        max-height: 80vh;
+                        overflow-y: auto;
+                        box-shadow: 0 0 30px rgba(102, 126, 234, 0.5);
+                        z-index: 1000;
+                        border: 2px solid rgba(255, 255, 255, 0.2);
+                        backdrop-filter: blur(10px);
+                    `;
+                    
+                    modal.innerHTML = studyTips + '<button onclick="this.parentElement.remove()" style="margin-top:10px;padding:5px 15px;">Close</button>';
+                    document.body.appendChild(modal);
+                });
+            }
+            else {
+                console.error('Study mode button not found!');
+            }
         });
     </script>
 </body>

@@ -4,7 +4,7 @@ from flask_minify import Minify
 import pytz
 
 app = Flask(__name__)
-Minify(app=app, html=True, js=True, cssless=True)
+#Minify(app=app, html=True, js=True, cssless=True)
 
 @app.route('/')
 def countdown():
