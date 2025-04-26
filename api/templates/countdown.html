@@ -70,7 +70,7 @@
         h1 {
             font-size: 2.8rem;
             margin-bottom: 10px;
-            background: linear-gradient(to right, #f6d365, #fda085);
+            background: linear-gradient(to right, #05fcfc, #fda085);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             position: relative;
@@ -84,7 +84,7 @@
             height: 4px;
             bottom: -10px;
             left: 0;
-            background: linear-gradient(to right, #f6d365, #fda085);
+            background: linear-gradient(to right, #04ffa3, #fda085);
             border-radius: 2px;
             transform-origin: right;
             animation: underline 2s ease-in-out infinite alternate;
@@ -204,7 +204,7 @@
         
         .progress-bar {
             height: 100%;
-            background: linear-gradient(to right, #f6d365, #fda085);
+            background: linear-gradient(to right, #00ffee, #02f3f3);
             border-radius: 5px;
             transition: width 1s ease;
             position: relative;
@@ -269,26 +269,137 @@
         }
         
         @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 20px;
+                margin: 10px;
+            }
+
             .countdown {
                 gap: 10px;
             }
             
             .countdown-item {
-                min-width: 80px;
-                padding: 15px;
+                min-width: 70px;
+                padding: 12px;
             }
             
             .countdown-value {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
             
             .countdown-label {
-                font-size: 0.9rem;
+                font-size: 0.8rem;
+                letter-spacing: 1px;
             }
             
             h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
+
+            .subtitle {
+                font-size: 1rem;
+                margin: 15px 0;
+            }
+
+            .motivational-quote {
+                font-size: 0.9rem;
+                padding: 15px;
+                max-width: 95%;
+            }
+
+            .target-date {
+                font-size: 0.9rem;
+                margin-top: 25px;
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .study-mode-btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+
+           
+        }
+
+        @media (max-width: 480px) {
+            .countdown-item {
+                min-width: 60px;
+                padding: 10px;
+            }
+
+            .countdown-value {
+                font-size: 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                padding: 15px;
+            }
+        }
+        .countdown-item {
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            transition: transform 0.5s, box-shadow 0.3s;
+        }
+
+        .countdown-item:hover {
+            transform: rotateY(15deg) rotateX(15deg) scale(1.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .countdown-value, .countdown-label {
+            backface-visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .countdown-value:hover {
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+            transform: scale(1.1);
+        }
+
+        @keyframes float3d {
+            0% {
+            transform: translateZ(0) rotateX(0);
+            }
+            50% {
+            transform: translateZ(20px) rotateX(5deg);
+            }
+            100% {
+            transform: translateZ(0) rotateX(0);
+            }
+        }
+
+        @keyframes glow {
+            0% {
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+            }
+            50% {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            }
+            100% {
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+            }
+        }
+
+        .countdown-item {
+            animation: float3d 3s ease-in-out infinite, glow 2s ease-in-out infinite;
+        }
+
+        .countdown-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .countdown-item:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .countdown-item:nth-child(4) {
+            animation-delay: 0.6s;
         }
     </style>
 </head>
@@ -318,9 +429,9 @@
             </div>
         </div>
         
-        <div class="progress-container animate__animated animate__fadeIn animate__delay-2s">
+        <!-- <div class="progress-container animate__animated animate__fadeIn animate__delay-2s">
             <div class="progress-bar" id="progressBar"></div>
-        </div>
+        </div> -->
         
         <p class="target-date animate__animated animate__fadeIn animate__delay-2s">
             <i class="fas fa-calendar-alt"></i> Target Date: {{ target_date }} (Colombo, Sri Lanka Time)
