@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for
 from datetime import datetime
 from flask_minify import Minify
 import pytz
@@ -43,6 +43,9 @@ def countdown():
                             minutes=0, 
                             seconds=0,
                             target_date='2025-11-10 08:00:00')
+@app.errorhandler(404)
+def page_not_found(e):
+    return redirect(url_for('countdown'))
 
 if __name__ == '__main__':
     app.run(debug=True)
