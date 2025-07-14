@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sri Lanka A/L Exam 2025 Countdown - Track Your Preparation Time</title>
     <meta name="description" content="Interactive countdown timer for Sri Lanka A/L exams 2025. Track your preparation with study tools, motivational quotes, and progress tracking. Ideal for Biology, Physics, Chemistry, and Mathematics students.">
-    <meta name="keywords" content="Sri Lanka A/L exam 2025 countdown, A/L exam preparation timer, Sri Lankan Advanced Level countdown, A/L study tools, Biology A/L exam, Physics A/L exam, Chemistry A/L exam, Mathematics A/L exam">
+    <meta name="keywords" content="Sri Lanka A/L exam 2025 countdown, A/L exam preparation timer, Sri Lankan Advanced Level countdown, A/L study tools, Biology A/L exam, Physics A/L exam, Chemistry A/L exam, Mathematics A/L exam, Past Papers, Model Papers, Online Classes, Study Materials, Revision Notes, Exam Results, Advanced Level, A/L, Sri Lanka Education">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Ishan Oshada">
     <meta name="language" content="English">
@@ -449,6 +449,10 @@
                 transform: scale(1);
             }
         }
+        @keyframes modalAnimation {
+                        from { transform: translate(-50%, -50%) scale(0.8); }
+                        to { transform: translate(-50%, -50%) scale(1); }
+                    }
     </style>
 </head>
 <body>
@@ -496,7 +500,9 @@
             <p>Developed by <a href="https://github.com/Ishanoshada" style="color: #fff; text-decoration: none; border-bottom: 1px dotted #fff;">Ishanoshada</a></p>
             <p>View source code on <a href="https://github.com/Ishanoshada/Countdown-AL" style="color: #fff; text-decoration: none; border-bottom: 1px dotted #fff;">GitHub <i class="fab fa-github"></i></a></p>
             <p>Boost your productivity with our <a href="https://pomodoro-productivity-time.vercel.app/" style="color: #fff; text-decoration: none; border-bottom: 1px dotted #fff;">Pomodoro Timer</a> for effective time management.</p>
+           <img style="border-radius: 10px; width: 150px;" src="https://dynamic-repo-badges.vercel.app/svg/count/1/Repository%20Views/Ishanoshada/Countdown-AL" alt="Repository Views" />
         </div>
+       
     </div>
     
     <script>
@@ -585,8 +591,37 @@
             "Your time is limited, don't waste it living someone else's life.",
             "The best way to predict your future is to create it.",
             "Education is the most powerful weapon which you can use to change the world.",
-            "The beautiful thing about learning is that no one can take it away from you."
-        ];
+            "The beautiful thing about learning is that no one can take it away from you.",
+            "You don't have to be great to start, but you have to start to be great.",
+            "The biggest risk is not taking any risk...",
+            "Knowledge is power. Information is liberating. Education is the premise of progress, in every society, in every family.",
+            "When you know better, you do better.",
+            "The highest reward for a person's toil is not what they get for it, but what they become by it.",
+            "The man who does not read has no advantage over the man who cannot read.",
+            "Learning is the only thing the mind never exhausts, never fears, and never loses.",
+            "The biggest glory in living lies not in never falling, but in rising every time we fall.",
+            "It does not matter how slowly you go as long as you do not stop.",
+            "Do something today that your future self will thank you for.",
+            "The only way to do great work is to love what you do.",
+            "The best revenge is massive success.",
+            "The only limit to our realization of tomorrow will be our doubts of today.",
+            "The biggest adventure you can take is to live the life of your dreams.",
+            "The biggest risk is not taking any risk.",
+            "Do not let what you cannot do interfere with what you can do.",
+            "Happiness can be found even in the darkest of times if one only remembers to turn on the light.",
+            "The biggest mistake you can make is believing you are working hard when you aren't.",
+            "The best way to get started is to quit talking and begin doing.",
+            "The future belongs to those who believe in the beauty of their dreams.",
+            "The best thing about the future is that it comes one day at a time.",
+            "The biggest challenge in life is to be yourself in a world that is trying to make you like everyone else.",
+            "The biggest enemy of knowledge is not ignorance, it is the illusion of knowledge.",
+            "The biggest failure is not trying.",
+            "The biggest lie is the one we tell ourselves.",
+            "The biggest wisdom is in knowing what you don't know.",
+            "The biggest wonder is not in the things you see, but in the things you don't see.",
+            "The biggest worry is not in the things you have, but in the things you don't have.",
+          
+    ];
         
         // Change motivational quote every 10 seconds
         function changeQuote() {
@@ -639,6 +674,7 @@
                                     </ul>
                                 </li>
                             </ul>
+                            <p>Boost your productivity with our <a href="https://pomodoro-productivity-time.vercel.app/" style="color: #fff; text-decoration: none; border-bottom: 1px dotted #fff;">Pomodoro Timer</a> for effective time management.</p>
                         </div>
                     `;
                     
@@ -659,7 +695,14 @@
                         z-index: 1000;
                         border: 2px solid rgba(255, 255, 255, 0.2);
                         backdrop-filter: blur(10px);
+                        animation: modalAnimation 0.5s ease-in-out;
                     `;
+                    modal.style.animation = 'none';
+                    setTimeout(() => {
+                        modal.style.animation = 'modalAnimation 0.5s ease-in-out';
+                    }, 100);
+                    
+                    
                     
                     modal.innerHTML = studyTips + '<button onclick="this.parentElement.remove()" style="margin-top:10px;padding:5px 15px;">Close</button>';
                     document.body.appendChild(modal);
