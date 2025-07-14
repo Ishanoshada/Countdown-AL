@@ -43,3 +43,6 @@ Contributions welcome! Please feel free to submit a Pull Request.
 ## License 📝
 
 [MIT License](LICENSE)
+
+**Repository Views** ![Views](https://profile-counter.glitch.me/alcountdown/count.svg)
+
