@@ -506,11 +506,11 @@
             <div class="progress-bar" id="progressBar"></div>
         </div> -->
         
-        <p class="target-date animate__animated animate__fadeIn animate__delay-2s">
+        <p class="target-date animate__animated animate__fadeIn animate__delay-1s">
             <i class="fas fa-calendar-alt"></i> Target Date: {{ target_date }} (Colombo, Sri Lanka Time)
         </p>
         
-        <div class="motivational-quote animate__animated animate__fadeIn animate__delay-2s">
+        <div class="motivational-quote animate__animated animate__fadeIn animate__delay-1s">
             "Success is not final, failure is not fatal: It is the courage to continue that counts."
         </div>
         
@@ -521,7 +521,7 @@
      
         <!-- Developer Info -->
        
-          <div class="developer-info animate__animated animate__fadeIn animate__delay-3s" style="margin-top: 30px; font-size: 0.9rem; opacity: 0.7;">
+          <div class="developer-info animate__animated animate__fadeIn animate__delay-2s" style="margin-top: 30px; font-size: 0.9rem; opacity: 0.7;">
             <p>Developed by <a href="https://github.com/Ishanoshada" style="color: #fff; text-decoration: none; border-bottom: 1px dotted #fff;">Ishanoshada</a></p>
             <div class="bmc-button-container animate__animated animate__fadeIn animate__delay-2s">
                 <a href="https://buymeacoffee.com/ishanoshada" target="_blank">
@@ -530,11 +530,18 @@
               </div>
             <p>View source code on <a href="https://github.com/Ishanoshada/Countdown-AL" style="color: #fff; text-decoration: none; border-bottom: 1px dotted #fff;">GitHub <i class="fab fa-github"></i></a></p>
             <p>Boost your productivity with our <a href="https://pomodoro-productivity-time.vercel.app/" style="color: #fff; text-decoration: none; border-bottom: 1px dotted #fff;">Pomodoro Timer</a> for effective time management.</p>
-            <img style="border-radius: 10px; width: 150px;" src="https://dynamic-repo-badges.vercel.app/svg/count/1/Repository%20Views/Ishanoshada/Countdown-AL" alt="Repository Views" />
+            <img id="repo-views" style="border-radius: 10px; width: 150px;" alt="Repository Views" />
+
         </div>
        
     </div>
-    
+    <script>
+        window.addEventListener("load", function () {
+          const img = document.getElementById("repo-views");
+          img.src = "https://dynamic-repo-badges.vercel.app/svg/count/1/Repository%20Views/Ishanoshada/Countdown-AL";
+        });
+      </script>
+      
     <script>
         // Create floating particles
         function createParticles() {
