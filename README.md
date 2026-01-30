@@ -4,7 +4,7 @@ A dynamic countdown timer for Sri Lankan A/L exams with an interactive interface
 
 ## Features ✨
 
-- Real-time countdown to A/L exam date (November 10, 2025)
+- Real-time countdown to A/L exam date (August 10, 2026)
 - Displays days, hours, minutes, and seconds
 - Responsive design for all devices
 - Animated UI elements
