@@ -9,9 +9,9 @@ Minify(app=app, html=True, js=True, cssless=True)
 @app.route('/')
 def countdown():
     try:
-        # Set the target date (November 10, 2025 at 8:00 AM Sri Lanka time)
+        # Set the target date (August 10, 2026 at 8:00 AM Sri Lanka time)
         colombo_tz = pytz.timezone('Asia/Colombo')
-        target_date = colombo_tz.localize(datetime.strptime('2025-11-10 08:00:00', '%Y-%m-%d %H:%M:%S'))
+        target_date = colombo_tz.localize(datetime.strptime('2026-08-10 08:00:00', '%Y-%m-%d %H:%M:%S'))
         
         # Get current time in Colombo timezone
         now = datetime.now(colombo_tz)
@@ -42,7 +42,8 @@ def countdown():
                             hours=0, 
                             minutes=0, 
                             seconds=0,
-                            target_date='2025-11-10 08:00:00')
+                            target_date='2026-08-10 08:00:00')
+
 @app.errorhandler(404)
 def page_not_found(e):
     return redirect(url_for('countdown'))
