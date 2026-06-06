@@ -34,7 +34,7 @@ python api/index.py
 
 ## Live Demo 🌐
 
-Visit: [countdown-al.vercel.app](https://countdown-al.vercel.app)
+Visit: [countdown-al.vercel.app](https://al-countdown.ishanoshada.com/)
 
 ## Contributing 🤝
 
