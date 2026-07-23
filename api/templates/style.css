@@ -1,0 +1,2603 @@
+/* ============================================================
+   THEME DEFINITIONS - CSS Custom Properties
+   ============================================================ */
+
+/* --- ORIGINAL THEME (current design) --- */
+[data-theme="original"] {
+    --bg-gradient-start: #667eea;
+    --bg-gradient-end: #764ba2;
+    --bg-gradient: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+
+    --card-bg: rgba(255, 255, 255, 0.1);
+    --card-border: 1px solid rgba(255, 255, 255, 0.2);
+    --card-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    --card-backdrop: blur(10px);
+
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.8);
+    --text-muted: rgba(255, 255, 255, 0.6);
+
+    --h1-gradient: linear-gradient(to right, #05fcfc, #fda085);
+    --h1-underline: linear-gradient(to right, #04ffa3, #fda085);
+
+    --countdown-item-bg: rgba(0, 0, 0, 0.2);
+    --countdown-item-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    --countdown-item-hover-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    --countdown-glow-color: rgba(255, 255, 255, 0.3);
+
+    --btn-gradient: linear-gradient(45deg, #f6d365, #fda085);
+    --btn-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --btn-hover-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+    --quote-border: 4px solid rgba(255, 255, 255, 0.3);
+    --quote-bg: rgba(255, 255, 255, 0.05);
+
+    --particle-color: rgba(255, 255, 255, 0.5);
+
+    --target-icon-color: #f6d365;
+
+    --theme-btn-bg: rgba(255, 255, 255, 0.15);
+    --theme-btn-hover: rgba(255, 255, 255, 0.25);
+    --theme-dropdown-bg: rgba(30, 30, 60, 0.95);
+
+    --accent-color: #05fcfc;
+
+    --font-main: 'Poppins', sans-serif;
+    --font-mono: 'Poppins', sans-serif;
+
+    --scanline-opacity: 0;
+    --matrix-char-opacity: 0;
+    --hacker-glow: none;
+}
+
+/* --- DARK THEME --- */
+[data-theme="dark"] {
+    --bg-gradient-start: #0d1117;
+    --bg-gradient-end: #161b22;
+    --bg-gradient: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+
+    --card-bg: rgba(22, 27, 34, 0.9);
+    --card-border: 1px solid rgba(48, 54, 61, 0.8);
+    --card-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    --card-backdrop: blur(20px);
+
+    --text-primary: #e6edf3;
+    --text-secondary: rgba(230, 237, 243, 0.8);
+    --text-muted: rgba(230, 237, 243, 0.5);
+
+    --h1-gradient: linear-gradient(to right, #58a6ff, #bc8cff);
+    --h1-underline: linear-gradient(to right, #58a6ff, #f78166);
+
+    --countdown-item-bg: rgba(13, 17, 23, 0.8);
+    --countdown-item-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    --countdown-item-hover-shadow: 0 15px 30px rgba(88, 166, 255, 0.15);
+    --countdown-glow-color: rgba(88, 166, 255, 0.2);
+
+    --btn-gradient: linear-gradient(45deg, #238636, #2ea043);
+    --btn-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    --btn-hover-shadow: 0 8px 20px rgba(46, 160, 67, 0.3);
+
+    --quote-border: 4px solid rgba(88, 166, 255, 0.4);
+    --quote-bg: rgba(88, 166, 255, 0.05);
+
+    --particle-color: rgba(88, 166, 255, 0.3);
+
+    --target-icon-color: #58a6ff;
+
+    --theme-btn-bg: rgba(255, 255, 255, 0.08);
+    --theme-btn-hover: rgba(255, 255, 255, 0.15);
+    --theme-dropdown-bg: rgba(13, 17, 23, 0.97);
+
+    --accent-color: #58a6ff;
+
+    --font-main: 'Poppins', sans-serif;
+    --font-mono: 'Poppins', sans-serif;
+
+    --scanline-opacity: 0;
+    --matrix-char-opacity: 0;
+    --hacker-glow: none;
+}
+
+/* --- FANCY THEME --- */
+[data-theme="fancy"] {
+    --bg-gradient-start: #fc5c7d;
+    --bg-gradient-end: #6a82fb;
+    --bg-gradient: linear-gradient(135deg, #fc5c7d, #6a82fb, #fc5c7d);
+    background-size: 200% 200%;
+
+    --card-bg: rgba(255, 255, 255, 0.12);
+    --card-border: 1px solid rgba(255, 215, 0, 0.3);
+    --card-shadow: 0 15px 35px rgba(252, 92, 125, 0.2), 0 0 60px rgba(106, 130, 251, 0.1);
+    --card-backdrop: blur(15px);
+
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.85);
+    --text-muted: rgba(255, 255, 255, 0.6);
+
+    --h1-gradient: linear-gradient(to right, #ffd700, #ff6b6b, #c084fc, #60a5fa);
+    --h1-underline: linear-gradient(to right, #ffd700, #ff6b6b, #c084fc);
+
+    --countdown-item-bg: rgba(255, 215, 0, 0.08);
+    --countdown-item-shadow: 0 8px 15px rgba(252, 92, 125, 0.15);
+    --countdown-item-hover-shadow: 0 15px 30px rgba(255, 215, 0, 0.2);
+    --countdown-glow-color: rgba(255, 215, 0, 0.3);
+
+    --btn-gradient: linear-gradient(45deg, #ffd700, #ff6b6b, #c084fc);
+    --btn-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+    --btn-hover-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+
+    --quote-border: 4px solid rgba(255, 215, 0, 0.5);
+    --quote-bg: rgba(255, 215, 0, 0.05);
+
+    --particle-color: rgba(255, 215, 0, 0.4);
+
+    --target-icon-color: #ffd700;
+
+    --theme-btn-bg: rgba(255, 255, 255, 0.15);
+    --theme-btn-hover: rgba(255, 255, 255, 0.25);
+    --theme-dropdown-bg: rgba(40, 20, 60, 0.97);
+
+    --accent-color: #ffd700;
+
+    --font-main: 'Poppins', sans-serif;
+    --font-mono: 'Poppins', sans-serif;
+
+    --scanline-opacity: 0;
+    --matrix-char-opacity: 0;
+    --hacker-glow: none;
+}
+
+/* --- HACKER THEME --- */
+[data-theme="hacker"] {
+    --bg-gradient-start: #0a0a0a;
+    --bg-gradient-end: #0d1a0d;
+    --bg-gradient: linear-gradient(135deg, #0a0a0a, #0d1a0d);
+
+    --card-bg: rgba(0, 20, 0, 0.85);
+    --card-border: 1px solid rgba(0, 255, 65, 0.3);
+    --card-shadow: 0 0 30px rgba(0, 255, 65, 0.1), 0 15px 35px rgba(0, 0, 0, 0.5);
+    --card-backdrop: blur(5px);
+
+    --text-primary: #00ff41;
+    --text-secondary: rgba(0, 255, 65, 0.8);
+    --text-muted: rgba(0, 255, 65, 0.5);
+
+    --h1-gradient: linear-gradient(to right, #00ff41, #39ff14, #00ff41);
+    --h1-underline: linear-gradient(to right, #00ff41, #39ff14);
+
+    --countdown-item-bg: rgba(0, 255, 65, 0.05);
+    --countdown-item-shadow: 0 0 15px rgba(0, 255, 65, 0.1);
+    --countdown-item-hover-shadow: 0 0 30px rgba(0, 255, 65, 0.25);
+    --countdown-glow-color: rgba(0, 255, 65, 0.2);
+
+    --btn-gradient: linear-gradient(45deg, #003300, #005500);
+    --btn-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+    --btn-hover-shadow: 0 0 25px rgba(0, 255, 65, 0.4);
+
+    --quote-border: 4px solid rgba(0, 255, 65, 0.4);
+    --quote-bg: rgba(0, 255, 65, 0.03);
+
+    --particle-color: rgba(0, 255, 65, 0.4);
+
+    --target-icon-color: #39ff14;
+
+    --theme-btn-bg: rgba(0, 255, 65, 0.1);
+    --theme-btn-hover: rgba(0, 255, 65, 0.2);
+    --theme-dropdown-bg: rgba(0, 10, 0, 0.97);
+    --theme-dropdown-border: 1px solid rgba(0, 255, 65, 0.3);
+
+    --accent-color: #00ff41;
+
+    --font-main: 'Fira Code', monospace;
+    --font-mono: 'Fira Code', monospace;
+
+    --scanline-opacity: 0.04;
+    --matrix-char-opacity: 0.06;
+    --hacker-glow: drop-shadow(0 0 8px rgba(0, 255, 65, 0.5));
+}
+
+/* --- PINK THEME --- */
+[data-theme="pink"] {
+    --bg-gradient-start: #ff6b9d;
+    --bg-gradient-end: #c44dff;
+    --bg-gradient: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+
+    --card-bg: rgba(255, 255, 255, 0.12);
+    --card-border: 1px solid rgba(255, 182, 193, 0.4);
+    --card-shadow: 0 15px 35px rgba(196, 77, 255, 0.2);
+    --card-backdrop: blur(12px);
+
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.85);
+    --text-muted: rgba(255, 255, 255, 0.6);
+
+    --h1-gradient: linear-gradient(to right, #ffd1dc, #ffb6c1, #ffc3d6);
+    --h1-underline: linear-gradient(to right, #ff6b9d, #ffc3d6);
+
+    --countdown-item-bg: rgba(255, 105, 157, 0.12);
+    --countdown-item-shadow: 0 8px 15px rgba(255, 105, 157, 0.15);
+    --countdown-item-hover-shadow: 0 15px 30px rgba(255, 105, 157, 0.3);
+    --countdown-glow-color: rgba(255, 182, 193, 0.3);
+
+    --btn-gradient: linear-gradient(45deg, #ff6b9d, #c44dff);
+    --btn-shadow: 0 5px 15px rgba(255, 105, 157, 0.3);
+    --btn-hover-shadow: 0 8px 20px rgba(196, 77, 255, 0.4);
+
+    --quote-border: 4px solid rgba(255, 182, 193, 0.5);
+    --quote-bg: rgba(255, 182, 193, 0.08);
+
+    --particle-color: rgba(255, 182, 193, 0.5);
+
+    --target-icon-color: #ffc3d6;
+
+    --theme-btn-bg: rgba(255, 255, 255, 0.15);
+    --theme-btn-hover: rgba(255, 255, 255, 0.25);
+    --theme-dropdown-bg: rgba(60, 20, 50, 0.97);
+
+    --accent-color: #ffc3d6;
+
+    --font-main: 'Poppins', sans-serif;
+    --font-mono: 'Poppins', sans-serif;
+
+    --scanline-opacity: 0;
+    --matrix-char-opacity: 0;
+    --hacker-glow: none;
+}
+
+/* --- OCEAN THEME --- */
+[data-theme="ocean"] {
+    --bg-gradient-start: #0077b6;
+    --bg-gradient-end: #023e8a;
+    --bg-gradient: linear-gradient(135deg, #0077b6, #023e8a, #00b4d8);
+
+    --card-bg: rgba(0, 180, 216, 0.1);
+    --card-border: 1px solid rgba(144, 224, 255, 0.25);
+    --card-shadow: 0 15px 35px rgba(0, 50, 100, 0.3);
+    --card-backdrop: blur(12px);
+
+    --text-primary: #caf0f8;
+    --text-secondary: rgba(202, 240, 248, 0.85);
+    --text-muted: rgba(202, 240, 248, 0.55);
+
+    --h1-gradient: linear-gradient(to right, #90e0ef, #caf0f8, #ade8f4);
+    --h1-underline: linear-gradient(to right, #00b4d8, #90e0ef);
+
+    --countdown-item-bg: rgba(0, 119, 182, 0.2);
+    --countdown-item-shadow: 0 8px 15px rgba(0, 50, 100, 0.2);
+    --countdown-item-hover-shadow: 0 15px 30px rgba(0, 180, 216, 0.25);
+    --countdown-glow-color: rgba(144, 224, 255, 0.3);
+
+    --btn-gradient: linear-gradient(45deg, #00b4d8, #0077b6);
+    --btn-shadow: 0 5px 15px rgba(0, 119, 182, 0.3);
+    --btn-hover-shadow: 0 8px 20px rgba(0, 180, 216, 0.4);
+
+    --quote-border: 4px solid rgba(144, 224, 255, 0.4);
+    --quote-bg: rgba(144, 224, 255, 0.05);
+
+    --particle-color: rgba(144, 224, 255, 0.4);
+
+    --target-icon-color: #90e0ef;
+
+    --theme-btn-bg: rgba(144, 224, 255, 0.12);
+    --theme-btn-hover: rgba(144, 224, 255, 0.22);
+    --theme-dropdown-bg: rgba(2, 62, 138, 0.97);
+
+    --accent-color: #90e0ef;
+
+    --font-main: 'Poppins', sans-serif;
+    --font-mono: 'Poppins', sans-serif;
+
+    --scanline-opacity: 0;
+    --matrix-char-opacity: 0;
+    --hacker-glow: none;
+}
+
+/* --- SUNSET THEME --- */
+[data-theme="sunset"] {
+    --bg-gradient-start: #ff4e00;
+    --bg-gradient-end: #ec9f05;
+    --bg-gradient: linear-gradient(135deg, #ff4e00, #ec9f05, #ff6b35);
+
+    --card-bg: rgba(255, 107, 53, 0.1);
+    --card-border: 1px solid rgba(255, 183, 77, 0.3);
+    --card-shadow: 0 15px 35px rgba(200, 60, 0, 0.25);
+    --card-backdrop: blur(12px);
+
+    --text-primary: #fff3e0;
+    --text-secondary: rgba(255, 243, 224, 0.85);
+    --text-muted: rgba(255, 243, 224, 0.55);
+
+    --h1-gradient: linear-gradient(to right, #ffba08, #ff6b35, #ff4e00);
+    --h1-underline: linear-gradient(to right, #ffba08, #ff4e00);
+
+    --countdown-item-bg: rgba(255, 78, 0, 0.15);
+    --countdown-item-shadow: 0 8px 15px rgba(200, 60, 0, 0.15);
+    --countdown-item-hover-shadow: 0 15px 30px rgba(255, 107, 53, 0.25);
+    --countdown-glow-color: rgba(255, 183, 77, 0.35);
+
+    --btn-gradient: linear-gradient(45deg, #ff6b35, #ec9f05);
+    --btn-shadow: 0 5px 15px rgba(255, 78, 0, 0.3);
+    --btn-hover-shadow: 0 8px 20px rgba(255, 107, 53, 0.4);
+
+    --quote-border: 4px solid rgba(255, 183, 77, 0.5);
+    --quote-bg: rgba(255, 183, 77, 0.05);
+
+    --particle-color: rgba(255, 183, 77, 0.45);
+
+    --target-icon-color: #ffba08;
+
+    --theme-btn-bg: rgba(255, 183, 77, 0.12);
+    --theme-btn-hover: rgba(255, 183, 77, 0.22);
+    --theme-dropdown-bg: rgba(80, 20, 0, 0.97);
+
+    --accent-color: #ffba08;
+
+    --font-main: 'Poppins', sans-serif;
+    --font-mono: 'Poppins', sans-serif;
+
+    --scanline-opacity: 0;
+    --matrix-char-opacity: 0;
+    --hacker-glow: none;
+}
+
+/* --- NEON THEME --- */
+[data-theme="neon"] {
+    --bg-gradient-start: #0a0015;
+    --bg-gradient-end: #1a0033;
+    --bg-gradient: linear-gradient(135deg, #0a0015, #1a0033, #0d001a);
+
+    --card-bg: rgba(20, 0, 50, 0.85);
+    --card-border: 2px solid rgba(255, 0, 255, 0.3);
+    --card-shadow: 0 0 25px rgba(255, 0, 255, 0.15), 0 15px 35px rgba(0, 0, 0, 0.4);
+    --card-backdrop: blur(8px);
+
+    --text-primary: #ff00ff;
+    --text-secondary: rgba(255, 0, 255, 0.8);
+    --text-muted: rgba(255, 0, 255, 0.5);
+
+    --h1-gradient: linear-gradient(to right, #ff00ff, #00ffff, #ff00ff);
+    --h1-underline: linear-gradient(to right, #ff00ff, #00ffff);
+
+    --countdown-item-bg: rgba(255, 0, 255, 0.08);
+    --countdown-item-shadow: 0 0 15px rgba(255, 0, 255, 0.15);
+    --countdown-item-hover-shadow: 0 0 30px rgba(255, 0, 255, 0.3);
+    --countdown-glow-color: rgba(255, 0, 255, 0.3);
+
+    --btn-gradient: linear-gradient(45deg, #ff00ff, #00ffff);
+    --btn-shadow: 0 0 15px rgba(255, 0, 255, 0.3);
+    --btn-hover-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+
+    --quote-border: 4px solid rgba(255, 0, 255, 0.4);
+    --quote-bg: rgba(255, 0, 255, 0.03);
+
+    --particle-color: rgba(0, 255, 255, 0.4);
+
+    --target-icon-color: #00ffff;
+
+    --theme-btn-bg: rgba(255, 0, 255, 0.1);
+    --theme-btn-hover: rgba(255, 0, 255, 0.2);
+    --theme-dropdown-bg: rgba(10, 0, 21, 0.97);
+
+    --accent-color: #00ffff;
+
+    --font-main: 'Fira Code', monospace;
+    --font-mono: 'Fira Code', monospace;
+
+    --scanline-opacity: 0;
+    --matrix-char-opacity: 0;
+    --hacker-glow: drop-shadow(0 0 8px rgba(255, 0, 255, 0.5));
+}
+
+/* --- FOREST THEME --- */
+[data-theme="forest"] {
+    --bg-gradient-start: #1b4332;
+    --bg-gradient-end: #2d6a4f;
+    --bg-gradient: linear-gradient(135deg, #1b4332, #2d6a4f, #40916c);
+
+    --card-bg: rgba(45, 106, 79, 0.15);
+    --card-border: 1px solid rgba(143, 199, 154, 0.3);
+    --card-shadow: 0 15px 35px rgba(10, 40, 20, 0.3);
+    --card-backdrop: blur(12px);
+
+    --text-primary: #d8f3dc;
+    --text-secondary: rgba(216, 243, 220, 0.85);
+    --text-muted: rgba(216, 243, 220, 0.55);
+
+    --h1-gradient: linear-gradient(to right, #95d5b2, #b7e4c7, #d8f3dc);
+    --h1-underline: linear-gradient(to right, #52b788, #95d5b2);
+
+    --countdown-item-bg: rgba(27, 67, 50, 0.3);
+    --countdown-item-shadow: 0 8px 15px rgba(10, 40, 20, 0.2);
+    --countdown-item-hover-shadow: 0 15px 30px rgba(82, 183, 136, 0.2);
+    --countdown-glow-color: rgba(149, 213, 178, 0.3);
+
+    --btn-gradient: linear-gradient(45deg, #52b788, #40916c);
+    --btn-shadow: 0 5px 15px rgba(45, 106, 79, 0.3);
+    --btn-hover-shadow: 0 8px 20px rgba(82, 183, 136, 0.4);
+
+    --quote-border: 4px solid rgba(149, 213, 178, 0.4);
+    --quote-bg: rgba(149, 213, 178, 0.05);
+
+    --particle-color: rgba(149, 213, 178, 0.4);
+
+    --target-icon-color: #95d5b2;
+
+    --theme-btn-bg: rgba(149, 213, 178, 0.12);
+    --theme-btn-hover: rgba(149, 213, 178, 0.22);
+    --theme-dropdown-bg: rgba(10, 30, 15, 0.97);
+
+    --accent-color: #95d5b2;
+
+    --font-main: 'Poppins', sans-serif;
+    --font-mono: 'Poppins', sans-serif;
+
+    --scanline-opacity: 0;
+    --matrix-char-opacity: 0;
+    --hacker-glow: none;
+}
+
+/* --- ROYAL THEME --- */
+[data-theme="royal"] {
+    --bg-gradient-start: #3c1361;
+    --bg-gradient-end: #512b58;
+    --bg-gradient: linear-gradient(135deg, #3c1361, #512b58, #7b2d8e);
+
+    --card-bg: rgba(80, 30, 120, 0.15);
+    --card-border: 1px solid rgba(218, 165, 32, 0.35);
+    --card-shadow: 0 15px 35px rgba(40, 10, 60, 0.35);
+    --card-backdrop: blur(14px);
+
+    --text-primary: #f5e6ff;
+    --text-secondary: rgba(245, 230, 255, 0.85);
+    --text-muted: rgba(245, 230, 255, 0.55);
+
+    --h1-gradient: linear-gradient(to right, #daa520, #ffd700, #daa520);
+    --h1-underline: linear-gradient(to right, #daa520, #ffd700);
+
+    --countdown-item-bg: rgba(60, 19, 97, 0.3);
+    --countdown-item-shadow: 0 8px 15px rgba(40, 10, 60, 0.2);
+    --countdown-item-hover-shadow: 0 15px 30px rgba(218, 165, 32, 0.2);
+    --countdown-glow-color: rgba(218, 165, 32, 0.3);
+
+    --btn-gradient: linear-gradient(45deg, #daa520, #b8860b);
+    --btn-shadow: 0 5px 15px rgba(184, 134, 11, 0.3);
+    --btn-hover-shadow: 0 8px 20px rgba(218, 165, 32, 0.4);
+
+    --quote-border: 4px solid rgba(218, 165, 32, 0.5);
+    --quote-bg: rgba(218, 165, 32, 0.05);
+
+    --particle-color: rgba(218, 165, 32, 0.35);
+
+    --target-icon-color: #ffd700;
+
+    --theme-btn-bg: rgba(218, 165, 32, 0.12);
+    --theme-btn-hover: rgba(218, 165, 32, 0.22);
+    --theme-dropdown-bg: rgba(30, 10, 50, 0.97);
+
+    --accent-color: #daa520;
+
+    --font-main: 'Poppins', sans-serif;
+    --font-mono: 'Poppins', sans-serif;
+
+    --scanline-opacity: 0;
+    --matrix-char-opacity: 0;
+    --hacker-glow: none;
+}
+
+/* --- AURORA THEME --- */
+[data-theme="aurora"] {
+    --bg-gradient-start: #0b132b;
+    --bg-gradient-end: #1c2541;
+    --bg-gradient: linear-gradient(135deg, #0b132b, #1c2541, #3a506b);
+
+    --card-bg: rgba(28, 37, 65, 0.85);
+    --card-border: 1px solid rgba(88, 220, 150, 0.3);
+    --card-shadow: 0 0 30px rgba(88, 220, 150, 0.1), 0 15px 35px rgba(0, 0, 0, 0.3);
+    --card-backdrop: blur(12px);
+
+    --text-primary: #bcffdb;
+    --text-secondary: rgba(188, 255, 219, 0.85);
+    --text-muted: rgba(188, 255, 219, 0.55);
+
+    --h1-gradient: linear-gradient(to right, #58dc96, #a78bfa, #58dc96, #f472b6);
+    --h1-underline: linear-gradient(to right, #58dc96, #a78bfa, #f472b6);
+
+    --countdown-item-bg: rgba(11, 19, 43, 0.6);
+    --countdown-item-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+    --countdown-item-hover-shadow: 0 15px 30px rgba(88, 220, 150, 0.2);
+    --countdown-glow-color: rgba(167, 139, 250, 0.3);
+
+    --btn-gradient: linear-gradient(45deg, #58dc96, #a78bfa, #f472b6);
+    --btn-shadow: 0 5px 15px rgba(88, 220, 150, 0.25);
+    --btn-hover-shadow: 0 8px 20px rgba(167, 139, 250, 0.35);
+
+    --quote-border: 4px solid rgba(167, 139, 250, 0.4);
+    --quote-bg: rgba(88, 220, 150, 0.04);
+
+    --particle-color: rgba(167, 139, 250, 0.4);
+
+    --target-icon-color: #a78bfa;
+
+    --theme-btn-bg: rgba(167, 139, 250, 0.12);
+    --theme-btn-hover: rgba(167, 139, 250, 0.22);
+    --theme-dropdown-bg: rgba(11, 19, 43, 0.97);
+
+    --accent-color: #a78bfa;
+
+    --font-main: 'Poppins', sans-serif;
+    --font-mono: 'Poppins', sans-serif;
+
+    --scanline-opacity: 0;
+    --matrix-char-opacity: 0;
+    --hacker-glow: none;
+}
+
+/* --- MONO THEME --- */
+[data-theme="mono"] {
+    --bg-gradient-start: #1a1a1a;
+    --bg-gradient-end: #2d2d2d;
+    --bg-gradient: linear-gradient(135deg, #1a1a1a, #2d2d2d, #1a1a1a);
+
+    --card-bg: rgba(40, 40, 40, 0.9);
+    --card-border: 1px solid rgba(255, 255, 255, 0.12);
+    --card-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    --card-backdrop: blur(10px);
+
+    --text-primary: #e0e0e0;
+    --text-secondary: rgba(224, 224, 224, 0.8);
+    --text-muted: rgba(224, 224, 224, 0.5);
+
+    --h1-gradient: linear-gradient(to right, #ffffff, #cccccc, #ffffff);
+    --h1-underline: linear-gradient(to right, #ffffff, #888888);
+
+    --countdown-item-bg: rgba(60, 60, 60, 0.5);
+    --countdown-item-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    --countdown-item-hover-shadow: 0 15px 30px rgba(255, 255, 255, 0.08);
+    --countdown-glow-color: rgba(255, 255, 255, 0.15);
+
+    --btn-gradient: linear-gradient(45deg, #555555, #333333);
+    --btn-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    --btn-hover-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+
+    --quote-border: 4px solid rgba(255, 255, 255, 0.2);
+    --quote-bg: rgba(255, 255, 255, 0.03);
+
+    --particle-color: rgba(255, 255, 255, 0.2);
+
+    --target-icon-color: #cccccc;
+
+    --theme-btn-bg: rgba(255, 255, 255, 0.08);
+    --theme-btn-hover: rgba(255, 255, 255, 0.15);
+    --theme-dropdown-bg: rgba(20, 20, 20, 0.97);
+
+    --accent-color: #ffffff;
+
+    --font-main: 'Poppins', sans-serif;
+    --font-mono: 'Fira Code', monospace;
+
+    --scanline-opacity: 0;
+    --matrix-char-opacity: 0;
+    --hacker-glow: none;
+}
+
+/* --- CANDY THEME --- */
+[data-theme="candy"] {
+    --bg-gradient-start: #ff6b6b;
+    --bg-gradient-end: #feca57;
+    --bg-gradient: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+
+    --card-bg: rgba(255, 255, 255, 0.15);
+    --card-border: 1px solid rgba(255, 255, 255, 0.3);
+    --card-shadow: 0 15px 35px rgba(255, 107, 107, 0.2);
+    --card-backdrop: blur(14px);
+
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.9);
+    --text-muted: rgba(255, 255, 255, 0.6);
+
+    --h1-gradient: linear-gradient(to right, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+    --h1-underline: linear-gradient(to right, #ff6b6b, #48dbfb);
+
+    --countdown-item-bg: rgba(255, 255, 255, 0.1);
+    --countdown-item-shadow: 0 8px 15px rgba(255, 107, 107, 0.15);
+    --countdown-item-hover-shadow: 0 15px 30px rgba(254, 202, 87, 0.25);
+    --countdown-glow-color: rgba(255, 159, 243, 0.3);
+
+    --btn-gradient: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb);
+    --btn-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+    --btn-hover-shadow: 0 8px 20px rgba(254, 202, 87, 0.4);
+
+    --quote-border: 4px solid rgba(255, 159, 243, 0.5);
+    --quote-bg: rgba(255, 255, 255, 0.05);
+
+    --particle-color: rgba(254, 202, 87, 0.4);
+
+    --target-icon-color: #feca57;
+
+    --theme-btn-bg: rgba(255, 255, 255, 0.15);
+    --theme-btn-hover: rgba(255, 255, 255, 0.25);
+    --theme-dropdown-bg: rgba(60, 20, 40, 0.97);
+
+    --accent-color: #feca57;
+
+    --font-main: 'Poppins', sans-serif;
+    --font-mono: 'Poppins', sans-serif;
+
+    --scanline-opacity: 0;
+    --matrix-char-opacity: 0;
+    --hacker-glow: none;
+}
+
+/* --- MIDNIGHT THEME --- */
+[data-theme="midnight"] {
+    --bg-gradient-start: #0f0c29;
+    --bg-gradient-end: #1a1a3e;
+    --bg-gradient: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+
+    --card-bg: rgba(15, 12, 41, 0.85);
+    --card-border: 1px solid rgba(100, 120, 255, 0.2);
+    --card-shadow: 0 0 25px rgba(100, 120, 255, 0.08), 0 15px 35px rgba(0, 0, 0, 0.4);
+    --card-backdrop: blur(14px);
+
+    --text-primary: #c3c8ff;
+    --text-secondary: rgba(195, 200, 255, 0.8);
+    --text-muted: rgba(195, 200, 255, 0.5);
+
+    --h1-gradient: linear-gradient(to right, #667eea, #a78bfa, #667eea);
+    --h1-underline: linear-gradient(to right, #667eea, #a78bfa);
+
+    --countdown-item-bg: rgba(48, 43, 99, 0.4);
+    --countdown-item-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+    --countdown-item-hover-shadow: 0 15px 30px rgba(102, 126, 234, 0.2);
+    --countdown-glow-color: rgba(167, 139, 250, 0.25);
+
+    --btn-gradient: linear-gradient(45deg, #667eea, #764ba2);
+    --btn-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    --btn-hover-shadow: 0 8px 20px rgba(167, 139, 250, 0.35);
+
+    --quote-border: 4px solid rgba(102, 126, 234, 0.4);
+    --quote-bg: rgba(102, 126, 234, 0.04);
+
+    --particle-color: rgba(167, 139, 250, 0.3);
+
+    --target-icon-color: #a78bfa;
+
+    --theme-btn-bg: rgba(102, 126, 234, 0.1);
+    --theme-btn-hover: rgba(102, 126, 234, 0.2);
+    --theme-dropdown-bg: rgba(10, 8, 30, 0.97);
+
+    --accent-color: #a78bfa;
+
+    --font-main: 'Poppins', sans-serif;
+    --font-mono: 'Poppins', sans-serif;
+
+    --scanline-opacity: 0;
+    --matrix-char-opacity: 0;
+    --hacker-glow: none;
+}
+
+/* --- EMBER THEME --- */
+[data-theme="ember"] {
+    --bg-gradient-start: #1a0000;
+    --bg-gradient-end: #3d0000;
+    --bg-gradient: linear-gradient(135deg, #1a0000, #3d0000, #5c0000);
+
+    --card-bg: rgba(60, 0, 0, 0.7);
+    --card-border: 1px solid rgba(255, 60, 0, 0.3);
+    --card-shadow: 0 0 30px rgba(255, 60, 0, 0.1), 0 15px 35px rgba(0, 0, 0, 0.5);
+    --card-backdrop: blur(10px);
+
+    --text-primary: #ffaa80;
+    --text-secondary: rgba(255, 170, 128, 0.85);
+    --text-muted: rgba(255, 170, 128, 0.5);
+
+    --h1-gradient: linear-gradient(to right, #ff3c00, #ff6e40, #ffab40);
+    --h1-underline: linear-gradient(to right, #ff3c00, #ffab40);
+
+    --countdown-item-bg: rgba(90, 0, 0, 0.4);
+    --countdown-item-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    --countdown-item-hover-shadow: 0 15px 30px rgba(255, 60, 0, 0.2);
+    --countdown-glow-color: rgba(255, 110, 64, 0.3);
+
+    --btn-gradient: linear-gradient(45deg, #ff3c00, #ff6e40);
+    --btn-shadow: 0 5px 15px rgba(255, 60, 0, 0.3);
+    --btn-hover-shadow: 0 8px 20px rgba(255, 110, 64, 0.4);
+
+    --quote-border: 4px solid rgba(255, 110, 64, 0.4);
+    --quote-bg: rgba(255, 60, 0, 0.04);
+
+    --particle-color: rgba(255, 110, 64, 0.35);
+
+    --target-icon-color: #ff6e40;
+
+    --theme-btn-bg: rgba(255, 60, 0, 0.1);
+    --theme-btn-hover: rgba(255, 60, 0, 0.2);
+    --theme-dropdown-bg: rgba(15, 0, 0, 0.97);
+
+    --accent-color: #ff6e40;
+
+    --font-main: 'Poppins', sans-serif;
+    --font-mono: 'Poppins', sans-serif;
+
+    --scanline-opacity: 0;
+    --matrix-char-opacity: 0;
+    --hacker-glow: none;
+}
+
+/* --- UNIVERSE THEME --- */
+[data-theme="universe"] {
+    --bg-gradient-start: #0a0015;
+    --bg-gradient-end: #1a0040;
+    --bg-gradient: linear-gradient(135deg, #0a0015, #1a0040, #0d002a);
+
+    --card-bg: rgba(20, 0, 50, 0.85);
+    --card-border: 1px solid rgba(168, 85, 247, 0.25);
+    --card-shadow: 0 0 30px rgba(147, 51, 234, 0.15), 0 15px 35px rgba(0, 0, 0, 0.4);
+    --card-backdrop: blur(14px);
+
+    --text-primary: #e0aaff;
+    --text-secondary: rgba(224, 170, 255, 0.85);
+    --text-muted: rgba(224, 170, 255, 0.5);
+
+    --h1-gradient: linear-gradient(to right, #c084fc, #818cf8, #60a5fa, #c084fc);
+    --h1-underline: linear-gradient(to right, #c084fc, #60a5fa);
+
+    --countdown-item-bg: rgba(30, 0, 60, 0.4);
+    --countdown-item-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    --countdown-item-hover-shadow: 0 15px 30px rgba(147, 51, 234, 0.2);
+    --countdown-glow-color: rgba(168, 85, 247, 0.3);
+
+    --btn-gradient: linear-gradient(45deg, #7c3aed, #4f46e5);
+    --btn-shadow: 0 5px 15px rgba(124, 58, 237, 0.3);
+    --btn-hover-shadow: 0 8px 20px rgba(168, 85, 247, 0.4);
+
+    --quote-border: 4px solid rgba(168, 85, 247, 0.4);
+    --quote-bg: rgba(147, 51, 234, 0.04);
+
+    --particle-color: rgba(168, 85, 247, 0.35);
+
+    --target-icon-color: #c084fc;
+
+    --theme-btn-bg: rgba(168, 85, 247, 0.1);
+    --theme-btn-hover: rgba(168, 85, 247, 0.2);
+    --theme-dropdown-bg: rgba(10, 0, 21, 0.97);
+
+    --accent-color: #c084fc;
+
+    --font-main: 'Poppins', sans-serif;
+    --font-mono: 'Poppins', sans-serif;
+
+    --scanline-opacity: 0;
+    --matrix-char-opacity: 0;
+    --hacker-glow: none;
+}
+
+/* --- BLACKHOLE THEME --- */
+[data-theme="blackhole"] {
+    --bg-gradient-start: #000000;
+    --bg-gradient-end: #0a0010;
+    --bg-gradient: linear-gradient(135deg, #000000, #0a0010, #050008);
+
+    --card-bg: rgba(5, 0, 15, 0.9);
+    --card-border: 1px solid rgba(139, 92, 246, 0.2);
+    --card-shadow: 0 0 40px rgba(139, 92, 246, 0.1), 0 15px 35px rgba(0, 0, 0, 0.6);
+    --card-backdrop: blur(16px);
+
+    --text-primary: #ddd6fe;
+    --text-secondary: rgba(221, 214, 254, 0.8);
+    --text-muted: rgba(221, 214, 254, 0.45);
+
+    --h1-gradient: linear-gradient(to right, #a78bfa, #ec4899, #8b5cf6);
+    --h1-underline: linear-gradient(to right, #a78bfa, #ec4899);
+
+    --countdown-item-bg: rgba(10, 0, 30, 0.6);
+    --countdown-item-shadow: 0 0 25px rgba(139, 92, 246, 0.1), 0 8px 15px rgba(0, 0, 0, 0.4);
+    --countdown-item-hover-shadow: 0 0 35px rgba(139, 92, 246, 0.2);
+    --countdown-glow-color: rgba(168, 85, 247, 0.25);
+
+    --btn-gradient: linear-gradient(45deg, #7c3aed, #db2777);
+    --btn-shadow: 0 5px 15px rgba(139, 92, 246, 0.25);
+    --btn-hover-shadow: 0 8px 20px rgba(219, 39, 119, 0.35);
+
+    --quote-border: 4px solid rgba(139, 92, 246, 0.35);
+    --quote-bg: rgba(139, 92, 246, 0.03);
+
+    --particle-color: rgba(168, 85, 247, 0.3);
+
+    --target-icon-color: #a78bfa;
+
+    --theme-btn-bg: rgba(139, 92, 246, 0.08);
+    --theme-btn-hover: rgba(139, 92, 246, 0.18);
+    --theme-dropdown-bg: rgba(3, 0, 8, 0.97);
+
+    --accent-color: #a78bfa;
+
+    --font-main: 'Poppins', sans-serif;
+    --font-mono: 'Poppins', sans-serif;
+
+    --scanline-opacity: 0;
+    --matrix-char-opacity: 0;
+    --hacker-glow: none;
+}
+
+/* ============================================================
+   BASE / RESET
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+    background: var(--bg-gradient);
+    background-size: 200% 200%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-primary);
+    position: relative;
+    transition: background 0.6s ease, color 0.4s ease;
+}
+
+/* Scanline overlay (hacker theme only) */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 255, 65, 0.03) 2px,
+        rgba(0, 255, 65, 0.03) 4px
+    );
+    pointer-events: none;
+    z-index: 9999;
+    opacity: var(--scanline-opacity);
+    transition: opacity 0.5s;
+}
+
+/* ============================================================
+   PARTICLES
+   ============================================================ */
+.particles {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 8px; height: 8px;
+    background: var(--particle-color);
+    border-radius: 50%;
+    animation: float 15s infinite linear;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh) translateX(0); opacity: 1; }
+    100% { transform: translateY(-100vh) translateX(100px); opacity: 0; }
+}
+
+/* ============================================================
+   MAIN CONTAINER
+   ============================================================ */
+.container {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    width: 90%;
+    padding: 40px;
+    background: var(--card-bg);
+    backdrop-filter: var(--card-backdrop);
+    -webkit-backdrop-filter: var(--card-backdrop);
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    border: var(--card-border);
+    text-align: center;
+    margin: 20px;
+    transition: background 0.5s, border 0.5s, box-shadow 0.5s;
+}
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    background: var(--h1-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    display: inline-block;
+    transition: background 0.5s;
+    filter: var(--hacker-glow);
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    width: 100%; height: 4px;
+    bottom: -10px; left: 0;
+    background: var(--h1-underline);
+    border-radius: 2px;
+    transform-origin: right;
+    animation: underline 2s ease-in-out infinite alternate;
+}
+
+@keyframes underline {
+    from { transform: scaleX(0.7); }
+    to { transform: scaleX(1); }
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    color: var(--text-secondary);
+}
+
+/* ============================================================
+   COUNTDOWN CARDS
+   ============================================================ */
+.countdown {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.countdown-item {
+    background: var(--countdown-item-bg);
+    border-radius: 15px;
+    padding: 20px;
+    min-width: 120px;
+    box-shadow: var(--countdown-item-shadow);
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: transform 0.5s, box-shadow 0.3s, background 0.5s;
+    animation: float3d 3s ease-in-out infinite, glow 2s ease-in-out infinite;
+}
+
+.countdown-item::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.08), transparent);
+    transform: rotate(45deg);
+    animation: shine 5s infinite linear;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) rotate(45deg); }
+}
+
+.countdown-item:hover {
+    transform: rotateY(15deg) rotateX(15deg) scale(1.1);
+    box-shadow: var(--countdown-item-hover-shadow);
+}
+
+.countdown-item:nth-child(2) { animation-delay: 0.2s; }
+.countdown-item:nth-child(3) { animation-delay: 0.4s; }
+.countdown-item:nth-child(4) { animation-delay: 0.6s; }
+
+@keyframes float3d {
+    0% { transform: translateZ(0) rotateX(0); }
+    50% { transform: translateZ(20px) rotateX(5deg); }
+    100% { transform: translateZ(0) rotateX(0); }
+}
+
+@keyframes glow {
+    0% { box-shadow: var(--countdown-item-shadow), 0 0 5px var(--countdown-glow-color); }
+    50% { box-shadow: var(--countdown-item-shadow), 0 0 25px var(--countdown-glow-color); }
+    100% { box-shadow: var(--countdown-item-shadow), 0 0 5px var(--countdown-glow-color); }
+}
+
+.countdown-value {
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 0 2px 15px rgba(0,0,0,0.2);
+    animation: pulse 2s infinite;
+    backface-visibility: hidden;
+    transition: all 0.3s ease;
+    font-family: var(--font-mono);
+}
+
+.countdown-value:hover {
+    text-shadow: 0 0 15px var(--accent-color);
+    transform: scale(1.1);
+}
+
+.countdown-label {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    backface-visibility: hidden;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* ============================================================
+   COUNTDOWN TIMER STYLES
+   ============================================================ */
+
+/* --- CLASSIC (default) - already defined above --- */
+
+/* --- FLIP CLOCK STYLE --- */
+[data-timer="flip"] .countdown {
+    gap: 15px;
+}
+[data-timer="flip"] .countdown-item {
+    background: linear-gradient(180deg, var(--countdown-item-bg) 0%, rgba(0,0,0,0.4) 49.9%, rgba(0,0,0,0.1) 50.1%, var(--countdown-item-bg) 100%);
+    border-radius: 12px;
+    padding: 0;
+    min-width: 110px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    animation: none;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+[data-timer="flip"] .countdown-item::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 0;
+    width: 100%; height: 2px;
+    background: rgba(0,0,0,0.4);
+    z-index: 2;
+}
+[data-timer="flip"] .countdown-item::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 50%;
+    background: rgba(255,255,255,0.03);
+    z-index: 1;
+}
+[data-timer="flip"] .countdown-value {
+    font-size: 3.5rem;
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+    letter-spacing: 2px;
+    animation: none;
+    text-shadow: 0 0 20px var(--accent-color), 0 2px 4px rgba(0,0,0,0.3);
+    z-index: 3;
+    position: relative;
+}
+[data-timer="flip"] .countdown-label {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    position: absolute;
+    bottom: 8px;
+    z-index: 3;
+}
+[data-timer="flip"] .countdown-item:hover {
+    transform: none;
+}
+@keyframes flipPulse {
+    0%, 100% { transform: scaleY(1); }
+    50% { transform: scaleY(1.02); }
+}
+[data-timer="flip"] .countdown-item {
+    animation: flipPulse 1s ease-in-out infinite;
+}
+
+/* --- CIRCLE / RADIAL STYLE --- */
+[data-timer="circle"] .countdown {
+    gap: 25px;
+}
+[data-timer="circle"] .countdown-item {
+    background: transparent;
+    border-radius: 50%;
+    width: 140px; height: 140px;
+    min-width: 140px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: none;
+    border: none;
+    box-shadow: none;
+}
+[data-timer="circle"] .countdown-item::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    padding: 4px;
+    background: conic-gradient(var(--accent-color) var(--progress, 0%), rgba(255,255,255,0.1) 0%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    transition: --progress 1s linear;
+}
+[data-timer="circle"] .countdown-item::after {
+    content: '';
+    position: absolute;
+    top: 4px; left: 4px; right: 4px; bottom: 4px;
+    border-radius: 50%;
+    background: var(--countdown-item-bg);
+    z-index: 0;
+    backdrop-filter: blur(10px);
+}
+[data-timer="circle"] .countdown-value {
+    font-size: 2.8rem;
+    z-index: 1;
+    position: relative;
+    animation: none;
+    text-shadow: 0 0 15px var(--accent-color);
+}
+[data-timer="circle"] .countdown-label {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    z-index: 1;
+    position: relative;
+}
+[data-timer="circle"] .countdown-item:hover {
+    transform: scale(1.1);
+}
+@keyframes circleGlow {
+    0%, 100% { filter: drop-shadow(0 0 8px var(--accent-color)); }
+    50% { filter: drop-shadow(0 0 20px var(--accent-color)); }
+}
+[data-timer="circle"] .countdown-item {
+    animation: circleGlow 2s ease-in-out infinite;
+}
+
+/* --- DIGITAL / LED STYLE --- */
+[data-timer="digital"] .countdown {
+    gap: 10px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 12px;
+    padding: 25px 30px;
+    display: inline-flex;
+    border: 2px solid rgba(255,255,255,0.05);
+    box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);
+}
+[data-timer="digital"] .countdown-item {
+    background: transparent;
+    border-radius: 8px;
+    padding: 10px 15px;
+    min-width: 80px;
+    box-shadow: none;
+    animation: none;
+    border: none;
+}
+[data-timer="digital"] .countdown-item::before { display: none; }
+[data-timer="digital"] .countdown-item:nth-child(even)::after {
+    content: ':';
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-70%);
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--accent-color);
+    z-index: 5;
+    font-family: 'Fira Code', monospace;
+}
+[data-timer="digital"] .countdown-item {
+    position: relative;
+}
+[data-timer="digital"] .countdown-value {
+    font-family: 'Fira Code', monospace;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    text-shadow: 0 0 15px var(--accent-color), 0 0 30px var(--accent-color);
+    animation: ledFlicker 0.1s ease-in-out infinite alternate;
+    background: rgba(0,255,65,0.03);
+    padding: 5px 10px;
+    border-radius: 4px;
+    letter-spacing: 3px;
+}
+[data-timer="digital"] .countdown-label {
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    margin-top: 5px;
+    opacity: 0.5;
+}
+[data-timer="digital"] .countdown-item:hover {
+    transform: none;
+}
+@keyframes ledFlicker {
+    0% { opacity: 0.95; }
+    100% { opacity: 1; }
+}
+
+/* --- BUBBLE / FLOAT STYLE --- */
+[data-timer="bubble"] .countdown {
+    gap: 20px;
+}
+[data-timer="bubble"] .countdown-item {
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.15), rgba(255,255,255,0.02));
+    border-radius: 50%;
+    width: 130px; height: 130px;
+    min-width: 130px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgba(255,255,255,0.15);
+    animation: bubbleFloat 3s ease-in-out infinite;
+    position: relative;
+    overflow: visible;
+}
+[data-timer="bubble"] .countdown-item::before {
+    content: '';
+    position: absolute;
+    top: 8px; left: 15px;
+    width: 25px; height: 12px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    transform: rotate(-30deg);
+}
+[data-timer="bubble"] .countdown-item::after { display: none; }
+[data-timer="bubble"] .countdown-value {
+    font-size: 2.5rem;
+    animation: none;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+[data-timer="bubble"] .countdown-label {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    margin-top: 2px;
+}
+[data-timer="bubble"] .countdown-item:nth-child(1) { animation-delay: 0s; }
+[data-timer="bubble"] .countdown-item:nth-child(2) { animation-delay: 0.5s; }
+[data-timer="bubble"] .countdown-item:nth-child(3) { animation-delay: 1s; }
+[data-timer="bubble"] .countdown-item:nth-child(4) { animation-delay: 1.5s; }
+@keyframes bubbleFloat {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-12px) scale(1.05); }
+}
+[data-timer="bubble"] .countdown-item:hover {
+    transform: scale(1.15);
+    border-color: var(--accent-color);
+}
+
+/* --- NEON OUTLINE STYLE --- */
+[data-timer="neon"] .countdown {
+    gap: 20px;
+}
+[data-timer="neon"] .countdown-item {
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    border-radius: 12px;
+    padding: 20px;
+    min-width: 120px;
+    box-shadow: 0 0 10px var(--accent-color), inset 0 0 10px rgba(255,255,255,0.03);
+    animation: neonPulse 1.5s ease-in-out infinite;
+}
+[data-timer="neon"] .countdown-item::before { display: none; }
+[data-timer="neon"] .countdown-value {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color), 0 0 40px var(--accent-color);
+    animation: none;
+}
+[data-timer="neon"] .countdown-label {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: var(--accent-color);
+    opacity: 0.7;
+}
+@keyframes neonPulse {
+    0%, 100% { box-shadow: 0 0 10px var(--accent-color), inset 0 0 10px rgba(255,255,255,0.03); }
+    50% { box-shadow: 0 0 20px var(--accent-color), 0 0 40px var(--accent-color), inset 0 0 15px rgba(255,255,255,0.05); }
+}
+
+/* --- SEGMENTED LCD STYLE --- */
+[data-timer="segmented"] .countdown {
+    gap: 15px;
+    background: #111;
+    border-radius: 8px;
+    padding: 20px 25px;
+    display: inline-flex;
+    border: 3px solid #333;
+}
+[data-timer="segmented"] .countdown-item {
+    background: #0a0a0a;
+    border-radius: 4px;
+    padding: 10px 15px;
+    min-width: 90px;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.8);
+    animation: none;
+    border: 1px solid #222;
+}
+[data-timer="segmented"] .countdown-item::before { display: none; }
+[data-timer="segmented"] .countdown-value {
+    font-family: 'Fira Code', monospace;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #ff3333;
+    text-shadow: 0 0 8px rgba(255, 51, 51, 0.6);
+    letter-spacing: 3px;
+    animation: segFlicker 3s ease-in-out infinite;
+    background: linear-gradient(180deg, rgba(255,51,51,0.05) 0%, transparent 50%, rgba(0,0,0,0.3) 100%);
+    padding: 5px 8px;
+    border-radius: 2px;
+}
+[data-timer="segmented"] .countdown-label {
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    color: #666;
+    margin-top: 5px;
+}
+[data-timer="segmented"] .countdown-item:hover { transform: none; }
+@keyframes segFlicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.92; }
+    92% { opacity: 1; }
+    93% { opacity: 0.85; }
+    94% { opacity: 1; }
+}
+
+/* --- CUBE STYLE --- */
+[data-timer="cube"] .countdown {
+    gap: 18px;
+}
+[data-timer="cube"] .countdown-item {
+    background: linear-gradient(145deg, var(--countdown-item-bg), rgba(0,0,0,0.3));
+    border-radius: 8px;
+    padding: 20px;
+    min-width: 115px;
+    transform: perspective(500px) rotateX(5deg);
+    transform-style: preserve-3d;
+    animation: cubeFloat 4s ease-in-out infinite;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+[data-timer="cube"] .countdown-item::before { display: none; }
+[data-timer="cube"] .countdown-value {
+    font-size: 3rem;
+    font-weight: 700;
+    animation: none;
+    text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+[data-timer="cube"] .countdown-label {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    margin-top: 8px;
+}
+[data-timer="cube"] .countdown-item:hover {
+    transform: perspective(500px) rotateX(0deg) translateY(-5px);
+}
+@keyframes cubeFloat {
+    0%, 100% { transform: perspective(500px) rotateX(5deg) translateY(0); }
+    50% { transform: perspective(500px) rotateX(5deg) translateY(-6px); }
+}
+
+/* --- GLASS MORPHISM STYLE --- */
+[data-timer="glass"] .countdown {
+    gap: 18px;
+}
+[data-timer="glass"] .countdown-item {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 20px;
+    padding: 22px;
+    min-width: 120px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    animation: glassGlow 3s ease-in-out infinite;
+}
+[data-timer="glass"] .countdown-item::before { display: none; }
+[data-timer="glass"] .countdown-value {
+    font-size: 3rem;
+    font-weight: 600;
+    animation: none;
+    backdrop-filter: blur(4px);
+}
+[data-timer="glass"] .countdown-label {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    opacity: 0.7;
+}
+[data-timer="glass"] .countdown-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+@keyframes glassGlow {
+    0%, 100% { box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); }
+    50% { box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 0 15px var(--accent-color); }
+}
+
+/* --- HOLOGRAM 3D STYLE --- */
+[data-timer="hologram"] .countdown {
+    gap: 22px;
+}
+[data-timer="hologram"] .countdown-item {
+    background: linear-gradient(135deg,
+        rgba(0,255,255,0.08) 0%,
+        rgba(255,0,255,0.05) 25%,
+        rgba(0,255,128,0.08) 50%,
+        rgba(255,255,0,0.05) 75%,
+        rgba(0,255,255,0.08) 100%);
+    background-size: 400% 400%;
+    border: 1px solid rgba(0,255,255,0.25);
+    border-radius: 14px;
+    padding: 22px;
+    min-width: 125px;
+    position: relative;
+    overflow: hidden;
+    animation: holoShift 6s ease infinite, holoFloat 3s ease-in-out infinite;
+    transform-style: preserve-3d;
+    perspective: 800px;
+}
+[data-timer="hologram"] .countdown-item::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(0,255,255,0.12) 40%,
+        rgba(255,0,255,0.08) 50%,
+        transparent 60%
+    );
+    animation: holoSweep 4s linear infinite;
+}
+[data-timer="hologram"] .countdown-item::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,255,255,0.03) 2px,
+        rgba(0,255,255,0.03) 4px
+    );
+    pointer-events: none;
+}
+[data-timer="hologram"] .countdown-value {
+    font-size: 3.2rem;
+    font-weight: 700;
+    animation: none;
+    background: linear-gradient(to right, #00ffff, #ff00ff, #00ff80, #ffff00);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: holoText 3s linear infinite;
+    filter: drop-shadow(0 0 10px rgba(0,255,255,0.5));
+    position: relative;
+    z-index: 1;
+}
+[data-timer="hologram"] .countdown-label {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    color: rgba(0,255,255,0.6);
+    position: relative;
+    z-index: 1;
+}
+@keyframes holoShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+@keyframes holoFloat {
+    0%, 100% { transform: rotateX(2deg) rotateY(0deg) translateY(0); }
+    25% { transform: rotateX(0deg) rotateY(3deg) translateY(-5px); }
+    50% { transform: rotateX(-2deg) rotateY(0deg) translateY(-8px); }
+    75% { transform: rotateX(0deg) rotateY(-3deg) translateY(-5px); }
+}
+@keyframes holoSweep {
+    0% { transform: translateX(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) rotate(45deg); }
+}
+@keyframes holoText {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 300% 50%; }
+}
+
+/* --- BLACKHOLE STYLE --- */
+[data-timer="blackhole"] .countdown {
+    gap: 25px;
+}
+[data-timer="blackhole"] .countdown-item {
+    background: radial-gradient(circle at center, #000000 0%, rgba(10,0,30,0.9) 50%, transparent 70%);
+    border-radius: 50%;
+    width: 150px; height: 150px;
+    min-width: 150px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: none;
+    border: none;
+    box-shadow: 0 0 40px rgba(128, 0, 255, 0.3), 0 0 80px rgba(128, 0, 255, 0.1);
+}
+[data-timer="blackhole"] .countdown-item::before {
+    content: '';
+    position: absolute;
+    top: -5px; left: -5px; right: -5px; bottom: -5px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    border-top-color: rgba(168, 85, 247, 0.6);
+    border-right-color: rgba(236, 72, 153, 0.4);
+    animation: bhSpin 3s linear infinite;
+    filter: blur(1px);
+}
+[data-timer="blackhole"] .countdown-item::after {
+    content: '';
+    position: absolute;
+    top: -12px; left: -12px; right: -12px; bottom: -12px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    border-bottom-color: rgba(59, 130, 246, 0.4);
+    border-left-color: rgba(168, 85, 247, 0.3);
+    animation: bhSpin 5s linear infinite reverse;
+    filter: blur(2px);
+}
+[data-timer="blackhole"] .countdown-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #e0aaff;
+    text-shadow: 0 0 15px rgba(168, 85, 247, 0.8), 0 0 30px rgba(168, 85, 247, 0.4);
+    animation: none;
+    z-index: 2;
+    position: relative;
+}
+[data-timer="blackhole"] .countdown-label {
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    color: rgba(168, 85, 247, 0.6);
+    z-index: 2;
+    position: relative;
+    margin-top: 2px;
+}
+@keyframes bhSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* --- UNIVERSE / GALAXY STYLE --- */
+[data-timer="universe"] .countdown {
+    gap: 22px;
+}
+[data-timer="universe"] .countdown-item {
+    background: radial-gradient(ellipse at center, rgba(30,0,60,0.9) 0%, rgba(5,0,20,0.95) 100%);
+    border-radius: 16px;
+    padding: 22px;
+    min-width: 125px;
+    position: relative;
+    overflow: hidden;
+    animation: universeFloat 5s ease-in-out infinite;
+    border: 1px solid rgba(147, 51, 234, 0.2);
+    box-shadow: 0 0 20px rgba(147, 51, 234, 0.15);
+}
+[data-timer="universe"] .countdown-item::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background:
+        radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.8) 0%, transparent 100%),
+        radial-gradient(1px 1px at 40% 70%, rgba(255,255,255,0.6) 0%, transparent 100%),
+        radial-gradient(1px 1px at 60% 20%, rgba(255,255,255,0.7) 0%, transparent 100%),
+        radial-gradient(1px 1px at 80% 50%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 10% 80%, rgba(200,180,255,0.9) 0%, transparent 100%),
+        radial-gradient(1px 1px at 70% 90%, rgba(200,180,255,0.6) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 10%, rgba(255,200,220,0.7) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 50% 50%, rgba(180,200,255,0.8) 0%, transparent 100%);
+    animation: universeStars 20s linear infinite;
+}
+[data-timer="universe"] .countdown-item::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 80px; height: 80px;
+    margin: -40px 0 0 -40px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(147,51,234,0.15) 0%, transparent 70%);
+    animation: universePulse 4s ease-in-out infinite;
+    filter: blur(8px);
+}
+[data-timer="universe"] .countdown-value {
+    font-size: 2.8rem;
+    font-weight: 700;
+    animation: none;
+    z-index: 1;
+    position: relative;
+    background: linear-gradient(to right, #c084fc, #818cf8, #60a5fa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 8px rgba(147, 51, 234, 0.5));
+}
+[data-timer="universe"] .countdown-label {
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    color: rgba(192, 132, 252, 0.6);
+    z-index: 1;
+    position: relative;
+}
+@keyframes universeFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+@keyframes universeStars {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+@keyframes universePulse {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.2); }
+}
+
+/* --- CYBERPUNK GRID STYLE --- */
+[data-timer="cyberpunk"] .countdown {
+    gap: 18px;
+    position: relative;
+}
+[data-timer="cyberpunk"] .countdown-item {
+    background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(10,0,20,0.95) 100%);
+    border: 1px solid rgba(255,0,100,0.4);
+    border-radius: 4px;
+    padding: 20px;
+    min-width: 120px;
+    position: relative;
+    overflow: hidden;
+    animation: cyberGlitch 8s ease-in-out infinite;
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+}
+[data-timer="cyberpunk"] .countdown-item::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 2px;
+    background: linear-gradient(90deg, transparent, #ff0064, transparent);
+    animation: cyberScan 2s linear infinite;
+}
+[data-timer="cyberpunk"] .countdown-item::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(180deg,
+        transparent 0%,
+        rgba(255,0,100,0.03) 50%,
+        transparent 100%);
+    animation: cyberFlicker 4s ease-in-out infinite;
+}
+[data-timer="cyberpunk"] .countdown-value {
+    font-family: 'Fira Code', monospace;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ff0064;
+    text-shadow: 0 0 10px #ff0064, 0 0 20px #ff0064, 2px 2px 0px #00ffff;
+    animation: none;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+}
+[data-timer="cyberpunk"] .countdown-label {
+    font-size: 0.6rem;
+    letter-spacing: 4px;
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+}
+@keyframes cyberScan {
+    0% { top: 0; opacity: 1; }
+    100% { top: 100%; opacity: 0; }
+}
+@keyframes cyberFlicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.97; }
+    52% { opacity: 0.9; }
+    54% { opacity: 1; }
+}
+@keyframes cyberGlitch {
+    0%, 95%, 100% { transform: translate(0); }
+    96% { transform: translate(-2px, 1px); }
+    97% { transform: translate(2px, -1px); }
+    98% { transform: translate(-1px, -1px); }
+    99% { transform: translate(1px, 1px); }
+}
+
+/* --- HEXTECH ARCANE STYLE --- */
+[data-timer="hextech"] .countdown {
+    gap: 20px;
+}
+[data-timer="hextech"] .countdown-item {
+    background: linear-gradient(135deg, rgba(0,40,80,0.9) 0%, rgba(0,20,50,0.95) 100%);
+    border: 1px solid rgba(0,200,255,0.2);
+    border-radius: 12px;
+    padding: 22px;
+    min-width: 120px;
+    position: relative;
+    overflow: hidden;
+    animation: hextechFloat 4s ease-in-out infinite;
+}
+[data-timer="hextech"] .countdown-item::before {
+    content: '';
+    position: absolute;
+    top: -2px; left: -2px; right: -2px; bottom: -2px;
+    border-radius: 12px;
+    background: conic-gradient(from 0deg, #00c8ff, #0066ff, #00c8ff, #00ffff, #00c8ff);
+    z-index: -1;
+    animation: hextechRotate 4s linear infinite;
+    opacity: 0.4;
+    filter: blur(3px);
+}
+[data-timer="hextech"] .countdown-item::after {
+    content: '';
+    position: absolute;
+    top: 2px; left: 2px; right: 2px; bottom: 2px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(0,40,80,0.95) 0%, rgba(0,20,50,0.98) 100%);
+    z-index: 0;
+}
+[data-timer="hextech"] .countdown-value {
+    font-size: 3rem;
+    font-weight: 700;
+    animation: none;
+    color: #00e5ff;
+    text-shadow: 0 0 15px rgba(0,229,255,0.6), 0 0 30px rgba(0,229,255,0.3);
+    position: relative;
+    z-index: 1;
+}
+[data-timer="hextech"] .countdown-label {
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    color: rgba(0,229,255,0.5);
+    position: relative;
+    z-index: 1;
+}
+@keyframes hextechFloat {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-6px) scale(1.02); }
+}
+@keyframes hextechRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* --- GRADIENT FILL STYLE --- */
+[data-timer="gradient"] .countdown {
+    gap: 18px;
+}
+[data-timer="gradient"] .countdown-item {
+    background: linear-gradient(135deg, var(--accent-color), var(--countdown-item-bg));
+    border-radius: 16px;
+    padding: 22px;
+    min-width: 120px;
+    animation: gradientShift 4s ease infinite;
+    background-size: 200% 200%;
+    border: none;
+}
+[data-timer="gradient"] .countdown-item::before { display: none; }
+[data-timer="gradient"] .countdown-value {
+    font-size: 3.2rem;
+    font-weight: 700;
+    animation: none;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+[data-timer="gradient"] .countdown-label {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+[data-timer="gradient"] .countdown-item:hover {
+    transform: scale(1.08);
+}
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ============================================================
+   COUNTDOWN TIMER STYLE SWITCHER
+   ============================================================ */
+.timer-switcher {
+    position: fixed;
+    top: 20px;
+    right: 80px;
+    z-index: 100;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.timer-switcher.ui-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+}
+
+.timer-toggle-btn {
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.2);
+    background: var(--theme-btn-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.timer-toggle-btn:hover {
+    background: var(--theme-btn-hover);
+    transform: scale(1.1) rotate(-15deg);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.timer-dropdown {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    max-height: 70vh;
+    overflow-y: auto;
+    background: var(--theme-dropdown-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 16px;
+    padding: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px) scale(0.95);
+    transition: all 0.3s ease;
+}
+
+.timer-dropdown::-webkit-scrollbar {
+    width: 4px;
+}
+.timer-dropdown::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.2);
+    border-radius: 2px;
+}
+
+.timer-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.timer-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+    border: 2px solid transparent;
+    font-family: var(--font-main);
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    background: transparent;
+    width: 100%;
+    text-align: left;
+}
+
+.timer-option:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+.timer-option.active {
+    background: rgba(255,255,255,0.1);
+    border-color: var(--accent-color);
+}
+
+.timer-option .timer-icon {
+    width: 24px;
+    text-align: center;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.timer-option .timer-label {
+    font-weight: 500;
+    flex: 1;
+}
+
+.timer-option .check-icon {
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.timer-option.active .check-icon {
+    opacity: 1;
+}
+
+/* ============================================================
+   TARGET DATE
+   ============================================================ */
+.target-date {
+    margin-top: 40px;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.target-date i {
+    font-size: 1.5rem;
+    color: var(--target-icon-color);
+}
+
+/* ============================================================
+   QUOTE
+   ============================================================ */
+.motivational-quote {
+    margin-top: 40px;
+    font-style: italic;
+    color: var(--text-secondary);
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding: 20px;
+    border-left: var(--quote-border);
+    background: var(--quote-bg);
+    border-radius: 0 10px 10px 0;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.study-mode-btn {
+    margin-top: 30px;
+    padding: 15px 30px;
+    background: var(--btn-gradient);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: var(--btn-shadow);
+    position: relative;
+    overflow: hidden;
+    animation: pulse 2s ease-in-out infinite;
+    font-family: var(--font-main);
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.study-mode-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--btn-hover-shadow);
+    color: white;
+}
+
+.study-mode-btn:active {
+    transform: translateY(-1px);
+}
+
+.study-mode-btn::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(255,255,255,0.2);
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+}
+
+.study-mode-btn:hover::before {
+    transform: translateX(0);
+}
+
+/* ============================================================
+   BUTTON GROUP
+   ============================================================ */
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin-top: 20px;
+}
+
+/* ============================================================
+   TIMETABLE LINK BUTTON
+   ============================================================ */
+.timetable-link {
+    margin-top: 12px;
+    background: var(--btn-gradient);
+    box-shadow: var(--btn-shadow);
+    animation: none;
+}
+.timetable-link:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--btn-hover-shadow);
+    color: white;
+}
+.timetable-link::before { display: none; }
+
+/* ============================================================
+   PROGRESS BAR
+   ============================================================ */
+.progress-container {
+    margin-top: 40px;
+    width: 100%;
+    background: rgba(255,255,255,0.1);
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--btn-gradient);
+    border-radius: 5px;
+    transition: width 1s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100px;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
+    animation: progress-shine 2s infinite;
+}
+
+@keyframes progress-shine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(300%); }
+}
+
+/* ============================================================
+   DEVELOPER INFO / FOOTER
+   ============================================================ */
+.developer-info {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.developer-info a {
+    color: var(--text-primary);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--text-muted);
+    transition: color 0.3s;
+}
+
+.developer-info a:hover {
+    color: var(--accent-color);
+}
+
+.bmc-button-container {
+    margin-top: 30px;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.bmc-button-container img {
+    height: 50px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bmc-button-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(255,204,0,0.4);
+}
+
+/* ============================================================
+   MODAL (Study Mode)
+   ============================================================ */
+@keyframes modalAnimation {
+    from { transform: translate(-50%, -50%) scale(0.8); opacity: 0; }
+    to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+.study-modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.study-modal {
+    background: var(--theme-dropdown-bg);
+    border: var(--card-border);
+    border-radius: 16px;
+    padding: 30px;
+    color: var(--text-primary);
+    max-width: 90%;
+    max-height: 80vh;
+    width: 500px;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    animation: modalAnimation 0.4s ease-out;
+    position: relative;
+    font-family: var(--font-main);
+}
+
+.study-modal h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    color: var(--accent-color);
+}
+
+.study-modal ul {
+    text-align: left;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.study-modal .close-modal {
+    position: absolute;
+    top: 12px; right: 16px;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+    line-height: 1;
+}
+
+.study-modal .close-modal:hover {
+    color: var(--accent-color);
+}
+
+/* ============================================================
+   THEME SWITCHER
+   ============================================================ */
+.theme-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.theme-switcher.ui-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+}
+
+.theme-toggle-btn {
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.2);
+    background: var(--theme-btn-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--text-primary);
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.theme-toggle-btn:hover {
+    background: var(--theme-btn-hover);
+    transform: scale(1.1) rotate(15deg);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.theme-dropdown {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 220px;
+    max-height: 70vh;
+    overflow-y: auto;
+    background: var(--theme-dropdown-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 16px;
+    padding: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px) scale(0.95);
+    transition: all 0.3s ease;
+}
+
+.theme-dropdown::-webkit-scrollbar {
+    width: 4px;
+}
+.theme-dropdown::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.2);
+    border-radius: 2px;
+}
+
+.theme-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.theme-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+    border: 2px solid transparent;
+    font-family: var(--font-main);
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    background: transparent;
+    width: 100%;
+    text-align: left;
+}
+
+.theme-option:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+.theme-option.active {
+    background: rgba(255,255,255,0.1);
+    border-color: var(--accent-color);
+}
+
+.theme-option .color-dots {
+    display: flex;
+    gap: 3px;
+    flex-shrink: 0;
+}
+
+.theme-option .color-dot {
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.theme-option .theme-label {
+    font-weight: 500;
+    flex: 1;
+}
+
+.theme-option .check-icon {
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.theme-option.active .check-icon {
+    opacity: 1;
+}
+
+/* ============================================================
+   FULLSCREEN BUTTON
+   ============================================================ */
+.fullscreen-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.2);
+    background: var(--theme-btn-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s, opacity 0.5s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.fullscreen-btn:hover {
+    background: var(--theme-btn-hover);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+.fullscreen-btn.ui-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+}
+
+/* ============================================================
+   FULLSCREEN MODE - Only show countdown, target date, quote
+   ============================================================ */
+body.fs-active .theme-switcher,
+body.fs-active .timer-switcher,
+body.fs-active .particles,
+body.fs-active h1,
+body.fs-active .subtitle,
+body.fs-active .target-date,
+body.fs-active .study-mode-btn,
+body.fs-active .developer-info {
+    display: none !important;
+}
+
+body.fs-active {
+    background: var(--bg-gradient);
+    overflow: hidden;
+}
+
+body.fs-active .container {
+    max-width: 900px;
+    padding: 50px 40px;
+    animation: fsFadeIn 0.5s ease-out;
+}
+
+body.fs-active .countdown {
+    gap: 30px;
+    margin: 40px 0;
+}
+
+body.fs-active .countdown-value {
+    font-size: 5rem;
+}
+
+body.fs-active .countdown-item {
+    min-width: 140px;
+    padding: 25px;
+}
+
+body.fs-active .target-date {
+    font-size: 1.3rem;
+    margin-top: 35px;
+}
+
+body.fs-active .motivational-quote {
+    font-size: 1.15rem;
+    max-width: 85%;
+    margin-top: 35px;
+    padding: 25px;
+}
+
+/* Exit fullscreen button - small, top-left corner */
+body.fs-active .fullscreen-btn {
+    top: 15px;
+    left: 15px;
+    width: 40px; height: 40px;
+    font-size: 1rem;
+    opacity: 0.5;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+body.fs-active .fullscreen-btn:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@keyframes fsFadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .countdown { gap: 10px; }
+
+    .countdown-item {
+        min-width: 70px;
+        padding: 12px;
+    }
+
+    .countdown-value { font-size: 2rem; }
+
+    .countdown-label {
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    }
+
+    h1 { font-size: 1.8rem; }
+
+    .subtitle {
+        font-size: 1rem;
+        margin: 15px 0;
+    }
+
+    .motivational-quote {
+        font-size: 0.9rem;
+        padding: 15px;
+        max-width: 95%;
+    }
+
+    .target-date {
+        font-size: 0.9rem;
+        margin-top: 25px;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .study-mode-btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    .timetable-link {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    .theme-switcher { top: 10px; right: 10px; }
+    .timer-switcher { top: 10px; right: 62px; }
+
+    .theme-toggle-btn, .timer-toggle-btn {
+        width: 42px; height: 42px;
+        font-size: 1.1rem;
+    }
+
+    .theme-dropdown, .timer-dropdown {
+        width: 180px;
+        right: -5px;
+    }
+
+    [data-timer="flip"] .countdown-item { min-width: 70px; height: 100px; }
+    [data-timer="flip"] .countdown-value { font-size: 2.2rem; }
+    [data-timer="circle"] .countdown-item { width: 100px; height: 100px; min-width: 100px; }
+    [data-timer="circle"] .countdown-value { font-size: 2rem; }
+    [data-timer="digital"] .countdown { padding: 15px 20px; gap: 5px; }
+    [data-timer="digital"] .countdown-value { font-size: 2rem; }
+    [data-timer="bubble"] .countdown-item { width: 95px; height: 95px; min-width: 95px; }
+    [data-timer="bubble"] .countdown-value { font-size: 1.8rem; }
+
+    [data-timer="neon"] .countdown-value { font-size: 2.2rem; }
+    [data-timer="neon"] .countdown-item { min-width: 80px; padding: 12px; }
+    [data-timer="segmented"] .countdown { padding: 12px 15px; gap: 8px; }
+    [data-timer="segmented"] .countdown-value { font-size: 2rem; }
+    [data-timer="cube"] .countdown-item { min-width: 80px; padding: 12px; }
+    [data-timer="cube"] .countdown-value { font-size: 2rem; }
+    [data-timer="glass"] .countdown-item { min-width: 80px; padding: 14px; }
+    [data-timer="glass"] .countdown-value { font-size: 2rem; }
+    [data-timer="gradient"] .countdown-item { min-width: 80px; padding: 14px; }
+    [data-timer="gradient"] .countdown-value { font-size: 2rem; }
+    [data-timer="hologram"] .countdown-item { min-width: 85px; padding: 14px; }
+    [data-timer="hologram"] .countdown-value { font-size: 2rem; }
+    [data-timer="blackhole"] .countdown-item { width: 110px; height: 110px; min-width: 110px; }
+    [data-timer="blackhole"] .countdown-value { font-size: 1.8rem; }
+    [data-timer="universe"] .countdown-item { min-width: 85px; padding: 14px; }
+    [data-timer="universe"] .countdown-value { font-size: 2rem; }
+    [data-timer="cyberpunk"] .countdown-item { min-width: 80px; padding: 12px; }
+    [data-timer="cyberpunk"] .countdown-value { font-size: 2rem; }
+    [data-timer="hextech"] .countdown-item { min-width: 80px; padding: 14px; }
+    [data-timer="hextech"] .countdown-value { font-size: 2rem; }
+}
+
+@media (max-width: 480px) {
+    .countdown-item {
+        min-width: 60px;
+        padding: 10px;
+    }
+
+    .countdown-value { font-size: 1.5rem; }
+    h1 { font-size: 1.5rem; }
+    .container { padding: 15px; }
+
+    [data-timer="flip"] .countdown-item { min-width: 60px; height: 85px; }
+    [data-timer="flip"] .countdown-value { font-size: 1.8rem; }
+    [data-timer="circle"] .countdown-item { width: 80px; height: 80px; min-width: 80px; }
+    [data-timer="circle"] .countdown-value { font-size: 1.6rem; }
+    [data-timer="digital"] .countdown { padding: 12px 15px; }
+    [data-timer="digital"] .countdown-value { font-size: 1.5rem; }
+    [data-timer="bubble"] .countdown-item { width: 75px; height: 75px; min-width: 75px; }
+    [data-timer="bubble"] .countdown-value { font-size: 1.4rem; }
+
+    [data-timer="neon"] .countdown-value { font-size: 1.8rem; }
+    [data-timer="neon"] .countdown-item { min-width: 65px; padding: 10px; }
+    [data-timer="segmented"] .countdown-value { font-size: 1.6rem; }
+    [data-timer="cube"] .countdown-value { font-size: 1.6rem; }
+    [data-timer="glass"] .countdown-value { font-size: 1.6rem; }
+    [data-timer="gradient"] .countdown-value { font-size: 1.6rem; }
+    [data-timer="hologram"] .countdown-value { font-size: 1.6rem; }
+    [data-timer="blackhole"] .countdown-item { width: 85px; height: 85px; min-width: 85px; }
+    [data-timer="blackhole"] .countdown-value { font-size: 1.4rem; }
+    [data-timer="universe"] .countdown-value { font-size: 1.6rem; }
+    [data-timer="cyberpunk"] .countdown-value { font-size: 1.6rem; }
+    [data-timer="hextech"] .countdown-value { font-size: 1.6rem; }
+
+    body.fs-active .container { padding: 30px 15px; }
+    body.fs-active .countdown-value { font-size: 3rem; }
+    body.fs-active .countdown-item { min-width: 80px; padding: 15px; }
+    body.fs-active .countdown { gap: 12px; }
+    body.fs-active .target-date { font-size: 1rem; }
+    body.fs-active .motivational-quote { font-size: 0.95rem; padding: 18px; }
+}
+
+/* ============================================================
+   FANCY THEME - ANIMATED GRADIENT BACKGROUND
+   ============================================================ */
+[data-theme="fancy"] body,
+[data-theme="fancy"].body {
+    animation: fancyGradient 6s ease infinite;
+}
+
+@keyframes fancyGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ============================================================
+   EXTRA PARTICLE ANIMATIONS
+   ============================================================ */
+@keyframes matrixFall {
+    0% {
+        transform: translateY(100vh) translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+    80% { opacity: 0.6; }
+    100% {
+        transform: translateY(-20vh) translateX(40px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes sparkleFloat {
+    0% {
+        transform: translateY(100vh) translateX(0) scale(0.5) rotate(0deg);
+        opacity: 0;
+    }
+    10% { opacity: 1; }
+    90% { opacity: 0.8; }
+    100% {
+        transform: translateY(-20vh) translateX(80px) scale(1.2) rotate(180deg);
+        opacity: 0;
+    }
+}
