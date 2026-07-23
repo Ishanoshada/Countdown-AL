@@ -2,9 +2,9 @@
 
 # 🎓 Countdown-AL
 
-### Sri Lanka A/L Exam 2026 — Interactive Countdown Timer
+### Sri Lanka A/L Exam  — Interactive Countdown Timer
 
-A beautifully designed, fully interactive countdown timer for Sri Lankan **GCE Advanced Level (A/L) Examination 2026** — helping students track every second until exam day.
+A beautifully designed, fully interactive countdown timer for Sri Lankan **GCE Advanced Level (A/L) Examination ** — helping students track every second until exam day.
 
 <!-- ![A/L Exam Countdown](https://countdown-al.vercel.app/og-image.jpg) -->
 
